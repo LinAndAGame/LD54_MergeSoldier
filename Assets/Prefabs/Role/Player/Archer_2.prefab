@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2260372917441445498
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 15683395892201624, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 15683395892201624, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 15683395892201624, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 15683395892201624, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 15683395892201624, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 15683395892201624, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 15683395892201624, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 15683395892201624, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 15683395892201624, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 15683395892201624, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 15683395892201624, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1423783327259570682, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
+      propertyPath: BaseHp
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1423783327259570682, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
+      propertyPath: RoleType
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 1423783327259570682, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
+      propertyPath: BaseDamage
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1423783327259570682, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
+      propertyPath: AssetRef_Bullet.m_AssetGUID
+      value: f1ffd1a65b089de4180e832840ba561f
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924307894365283128, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
+      propertyPath: m_Color.b
+      value: 0.26004583
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924307894365283128, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
+      propertyPath: m_Color.g
+      value: 0.49056602
+      objectReference: {fileID: 0}
+    - target: {fileID: 5924307894365283128, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
+      propertyPath: m_Color.r
+      value: 0.14994659
+      objectReference: {fileID: 0}
+    - target: {fileID: 6472097163314288872, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
+      propertyPath: m_Name
+      value: Archer_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6908559139214051277, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}

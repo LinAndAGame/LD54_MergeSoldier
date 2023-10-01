@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 25baafae6497e294c940ca30c437cbdb
+  m_SerializeEntries:
+  - m_GUID: 4c986262ab334434c82dc8d10fb679b1
+    m_Address: Assets/Prefabs/Bullet/Bullet.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf445b70c3d74f341be7ba1eb9b4b573
+    m_Address: Assets/Prefabs/Role/Enemies/Enemy.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 971d66235c41c054e9fb4825015ff495
+    m_Address: Assets/Prefabs/Effects/TextEffect/TextEffect.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1ffd1a65b089de4180e832840ba561f
+    m_Address: Assets/Prefabs/Bullet/Bullet_2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b24846bfa2462394895b302503f2bd66
+    m_Address: Assets/Prefabs/Bullet/Bullet_3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 9381abd43046d304fbe9ada919096383, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b520cb1803686f84183a596b45bb0661, type: 2}
+    - {fileID: 11400000, guid: b44ec9be53ab70340a6ec8d05de65a60, type: 2}
