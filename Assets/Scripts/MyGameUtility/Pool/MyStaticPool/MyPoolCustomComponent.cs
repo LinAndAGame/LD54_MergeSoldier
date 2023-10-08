@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
-using UnityEngine.Pool;
 
 namespace MyGameUtility {
     public static class MyPoolCustomComponent {
         private static Dictionary<Component, object>      PoolCache1 = new Dictionary<Component, object>();
-        private static Dictionary<AssetReference, object> PoolCache2 = new Dictionary<AssetReference, object>();
+        private static Dictionary<AssetReference, object> PoolCache2 = new Dictionary<AssetReference, object>(new AssetReferenceEquipCompare());
 
 #region Preload
 

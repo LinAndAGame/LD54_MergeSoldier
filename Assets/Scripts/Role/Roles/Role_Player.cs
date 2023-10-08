@@ -98,7 +98,6 @@ namespace Role {
 
         public void LevelUp(int lv) {
             RoleCommonInfo.Lv += lv;
-            Debug.Log($"升级{lv}!");
         }
 
         public override void DestroySelf() {

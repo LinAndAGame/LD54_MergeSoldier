@@ -5,7 +5,7 @@ using UnityEngine.AddressableAssets;
 namespace MyGameUtility {
     public class MyPoolSimpleComponent {
         private static Dictionary<Component, object>      _AllPoolCache1 = new Dictionary<Component, object>();
-        private static Dictionary<AssetReference, object> _AllPoolCache2 = new Dictionary<AssetReference, object>();
+        private static Dictionary<AssetReference, object> _AllPoolCache2 = new Dictionary<AssetReference, object>(new AssetReferenceEquipCompare());
 
         #region Preload
         

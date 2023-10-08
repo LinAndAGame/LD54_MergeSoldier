@@ -5,7 +5,7 @@ using UnityEngine.AddressableAssets;
 namespace MyGameUtility {
     public static class MyPoolSimpleGameObject {
         private static readonly Dictionary<GameObject, MyDefaultGameObjectPool>        PoolCache1 = new Dictionary<GameObject, MyDefaultGameObjectPool>();
-        private static readonly Dictionary<AssetReference, MyGameObjectPoolByAssetRef> PoolCache2 = new Dictionary<AssetReference, MyGameObjectPoolByAssetRef>();
+        private static readonly Dictionary<AssetReference, MyGameObjectPoolByAssetRef> PoolCache2 = new Dictionary<AssetReference, MyGameObjectPoolByAssetRef>(new AssetReferenceEquipCompare());
 
         public static void Preload(int count, GameObject dataFrom) {
             GetPoolCacheFrom1(dataFrom).Preload(count);
