@@ -2,7 +2,7 @@
 
 namespace DamageProcess {
     public struct DamageInfo {
-        public RoleCtrl DamageFrom;
+        public BaseRoleCtrl DamageFrom;
         public float      Damage;
     }
 }

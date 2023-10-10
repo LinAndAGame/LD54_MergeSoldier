@@ -1,8 +1,8 @@
 ﻿namespace Role {
     public class BaseRoleInfo {
-        protected RoleCtrl Owner;
+        protected BaseRoleCtrl Owner;
 
-        public BaseRoleInfo(RoleCtrl owner) {
+        public BaseRoleInfo(BaseRoleCtrl owner) {
             Owner = owner;
         }
     }

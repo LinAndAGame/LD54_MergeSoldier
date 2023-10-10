@@ -17,7 +17,7 @@ namespace Role {
             }
         }
 
-        public RoleCommonInfo(RoleCtrl owner) : base(owner) {
+        public RoleCommonInfo(BaseRoleCtrl owner) : base(owner) {
             Damage = new ValueCacheFloat(Owner.BaseDamage);
         }
     }

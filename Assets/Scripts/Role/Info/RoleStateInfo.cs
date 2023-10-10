@@ -9,6 +9,6 @@ namespace Role {
 
         public bool IsDeath;
         
-        public RoleStateInfo(RoleCtrl owner) : base(owner) { }
+        public RoleStateInfo(BaseRoleCtrl owner) : base(owner) { }
     }
 }

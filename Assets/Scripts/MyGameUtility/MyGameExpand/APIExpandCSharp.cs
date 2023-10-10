@@ -15,6 +15,16 @@ namespace MyGameExpand {
         public static List<T> Clone<T>(this List<T> original) {
             return new List<T>(original);
         }
+        
+        /// <summary>
+        /// 对List排序
+        /// </summary>
+        /// <param name="original"></param>
+        /// <typeparam name="T"></typeparam>
+        public static List<T> SortList<T>(this List<T> original, Comparison<T> comparison) {
+            original.Sort(comparison);
+            return original;
+        }
 
         /// <summary>
         /// 对List类拓展乱序

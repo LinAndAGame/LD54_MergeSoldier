@@ -1,4 +1,6 @@
 ﻿using Player;
+using Role;
+using Role.Ability;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,20 +10,27 @@ namespace Fight {
         public Button          BtnSelf;
         public TextMeshProUGUI TMP_Description;
 
-        private BasePlayerAbilityAsset _CurAbilityAsset;
+        private BaseRoleAbilityData _CurAbilityAsset;
+        private BaseRoleCtrl                      _Target;
         
         public void Init() {
             BtnSelf.onClick.AddListener(() => {
-                _CurAbilityAsset.ApplyAbility();
-                _CurAbilityAsset = null;
+                _Target.BuffSystemRef.AddBuff(_CurAbilityAsset.GetRoleAbility(_Target));
                 FightCtrl.I.ContinueGame();
                 FightCtrl.I.FightUIRef.HidePlayerAbilityChoosePanel();
+                FightCtrl.I.Data.CurTimeScale.Current = 1;
             });
         }
 
-        public void ShowAbility(BasePlayerAbilityAsset abilityAsset) {
+        public void ShowAbility(BaseRoleCtrl target, BaseRoleAbilityData abilityAsset) {
+            this.gameObject.SetActive(true);
+            _Target              = target;
             TMP_Description.text = abilityAsset.Description;
             _CurAbilityAsset     = abilityAsset;
+        }
+
+        public void Hide() {
+            this.gameObject.SetActive(false);
         }
     }
 }

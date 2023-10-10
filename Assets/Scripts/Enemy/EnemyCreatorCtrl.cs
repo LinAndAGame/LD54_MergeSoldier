@@ -29,16 +29,13 @@ namespace Enemy {
                     var allRandomLocators = FightCtrl.I.MapCtrlRef.AllEnemyMapLocators.GetRandomList(CountOnce);
                     foreach (MapLocator randomLocator in allRandomLocators) {
                         var enemyIns = Instantiate(AssetRef_AllEnemies.GetRandomElement());
-                        enemyIns.Init(randomLocator);
+                        enemyIns.transform.position = randomLocator.transform.position;
+                        enemyIns.Init();
                         _AllEnemies.Add(enemyIns);
                     }
                     yield return new WaitForSeconds(Interval);
                 }
             }
-        }
-
-        public List<Role_Enemy> GetEnemiesByColumn(int columnIndex) {
-            return _AllEnemies.FindAll(data => data.ColumnIndex == columnIndex);
         }
     }
 }

@@ -8,7 +8,7 @@ namespace MyGameUtility {
             _AllValueCacheElements.Add(valueCacheElement);
         }
 
-        public void RemoveAll() {
+        public void Clear() {
             foreach (IValueCacheElement valueCacheElement in _AllValueCacheElements) {
                 valueCacheElement.Remove();
             }

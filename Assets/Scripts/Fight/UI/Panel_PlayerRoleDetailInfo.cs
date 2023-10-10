@@ -10,12 +10,12 @@ namespace Fight {
         public TextMeshProUGUI TMP_RoleType;
         public Image           Img_Role;
 
-        public void Init(RoleCtrl roleCtrl) {
+        public void Init(BaseRoleCtrl roleCtrl) {
             TMP_RoleType.text = roleCtrl.RoleType.ToString();
             TMP_BaseHp.text   = roleCtrl.BaseHp.ToString();
             TMP_BaseAtk.text  = roleCtrl.BaseDamage.ToString();
-            Img_Role.sprite   = roleCtrl.RoleEffectSystemRef.SR_Self.sprite;
-            Img_Role.color    = roleCtrl.RoleEffectSystemRef.SR_Self.color;
+            Img_Role.sprite   = roleCtrl.RoleComVfxRef.SR_Self.sprite;
+            Img_Role.color    = roleCtrl.RoleComVfxRef.SR_Self.color;
         }
     }
 }

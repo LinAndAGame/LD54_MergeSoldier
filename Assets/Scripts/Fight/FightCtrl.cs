@@ -31,8 +31,6 @@ namespace Fight {
             Data.FightProcess.OnCurValueEqualsMax.AddListener(() => {
                 StopGame();
                 Data.CurEnemyLv.Current++;
-                AllPlayerAbilityAssets.RandomList();
-                FightUIRef.OpenPlayerAbilityChoosePanel(AllPlayerAbilityAssets.GetRange(0,3));
                 Data.FightProcess.Current = 0;
             });
             

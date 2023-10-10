@@ -8,6 +8,6 @@
         public CustomAction OnBeHitFailure = new CustomAction();
         public CustomAction OnBeHitSucceed = new CustomAction();
         
-        public RoleEvent(RoleCtrl owner) : base(owner) { }
+        public RoleEvent(BaseRoleCtrl owner) : base(owner) { }
     }
 }

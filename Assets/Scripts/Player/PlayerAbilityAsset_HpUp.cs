@@ -7,16 +7,16 @@ using UnityEngine;
 namespace Player {
     [CreateAssetMenu(fileName = "HpUp", menuName = "编辑器资源/HpUp", order = 0)]
     public class PlayerAbilityAsset_HpUp : BasePlayerAbilityAsset {
-        public List<RoleTypes> AllRoleTypes = new List<RoleTypes>();
+        public List<RoleTypeEnum> AllRoleTypes = new List<RoleTypeEnum>();
         public float           UpValue      = 2;
 
         public override void ApplyAbility() {
             base.ApplyAbility();
-            var temp = FightCtrl.I.MapCtrlRef.AllPlayerCanAttackMapLocators.FindAll(data => data.HasRoleData);
+            var temp = FightCtrl.I.MapCtrlRef.AllCanAttackMapLocators.FindAll(data => data.HasRoleData);
             foreach (MapLocator mapLocator in temp) {
                 if (AllRoleTypes.Contains(mapLocator.CurPlacedRoleCtrl.RoleType)) {
-                    mapLocator.CurPlacedRoleCtrl.RoleHpSystemRef.Hp.Max += UpValue;
-                    mapLocator.CurPlacedRoleCtrl.RoleHpSystemRef.Hp.Current += UpValue;
+                    mapLocator.CurPlacedRoleCtrl.HpInternalSystemRef.Hp.Max += UpValue;
+                    mapLocator.CurPlacedRoleCtrl.HpInternalSystemRef.Hp.Current += UpValue;
                 }
             }
         }

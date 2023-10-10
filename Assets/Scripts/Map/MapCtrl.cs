@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Fight;
+using MyGameExpand;
 using Role;
 using RoleGroups;
 using Sirenix.OdinInspector;
@@ -17,22 +18,34 @@ namespace Map {
         public List<MapLocator> AllPlayerMapLocators;
         public List<MapLocator> AllEnemyMapLocators;
         public List<MapLocator> AllPlayerPreviewMapLocators;
-        public List<MapLocator> AllPlayerCanAttackMapLocators;
+        public List<MapLocator> AllCanAttackMapLocators;
 
-        private Stack<MapLocator> GetHasDataUpMapLocators(MapLocator from) {
-            Stack<MapLocator> columnMapLocators = new Stack<MapLocator>();
-            do {
-                columnMapLocators.Push(from);
-                from = from.UpLocator;
-            } while (from != null && from.HasRoleData);
-
-            return columnMapLocators;
+        public bool IsLocatorAtAttackArea(MapLocator original) {
+            return AllCanAttackMapLocators.Contains(original);
         }
-
-        private List<Role_Player> getLinkedRolePlayers(Role_Player rolePlayer) {
-            List<Role_Player>  result      = new List<Role_Player>();
+        public bool IsLocatorAtPreviewArea(MapLocator original) {
+            return AllPlayerPreviewMapLocators.Contains(original);
+        }
+        public MapLocator GetUpAroundLocator(MapLocator original) {
+            return GetAroundLocator(original, Vector2Int.up);
+        }
+        public MapLocator GetDownAroundLocator(MapLocator original) {
+            return GetAroundLocator(original, Vector2Int.down);
+        }
+        public MapLocator GetLeftAroundLocator(MapLocator original) {
+            return GetAroundLocator(original, Vector2Int.left);
+        }
+        public MapLocator GetRightAroundLocator(MapLocator original) {
+            return GetAroundLocator(original, Vector2Int.right);
+        }
+        public MapLocator GetAroundLocator(MapLocator original, Vector2Int dir) {
+            return AllMapLocators.Find(data => data.Pos == original.Pos + dir);
+        }
+        
+        public List<BaseRole_Player> GetLinkedRolePlayers(BaseRole_Player rolePlayer) {
+            List<BaseRole_Player>  result      = new List<BaseRole_Player>();
             List<MapLocator>   checkedList = new List<MapLocator>();
-            Queue<Role_Player> tempQueue   = new Queue<Role_Player>();
+            Queue<BaseRole_Player> tempQueue   = new Queue<BaseRole_Player>();
             tempQueue.Enqueue(rolePlayer);
 
             while (tempQueue.Count > 0) {
@@ -77,7 +90,7 @@ namespace Map {
             MapLocator canPlacedMapLocator = GetCanPlacedMapLocator(roleGroup, mapLocator);
 
             for (int i = 0; i < roleGroup.AllReadyPlacedRoleCtrls.Count; i++) {
-                Role_Player readyPlacedRoleCtrl = roleGroup.AllReadyPlacedRoleCtrls[i];
+                BaseRole_Player readyPlacedRoleCtrl = roleGroup.AllReadyPlacedRoleCtrls[i];
                 readyPlacedRoleCtrl.PlaceToLocator(canPlacedMapLocator);
                 readyPlacedRoleCtrl.MoveToBelongToMapLocator();
                 canPlacedMapLocator = canPlacedMapLocator.RightLocator;
@@ -85,96 +98,143 @@ namespace Map {
         }
 
         public void PlaceRoleGroup(RoleGroup roleGroup, MapLocator mapLocator) {
-            bool needReCall = false;
             PreviewPlaceRoleGroup(roleGroup, mapLocator);
+            initRoleGroupRoles();
+            moveUp(out List<BaseRole_Player> abandonedRoles);
+            abandonedRolesHandle(abandonedRoles);
 
-            do {
-                needReCall = false;
-                levelUp();
+            List<BaseRole_Player> aliveLinkedList = new List<BaseRole_Player>();
+
+            while (checkLinkList(out aliveLinkedList)) {
+                var              curRoleType        = aliveLinkedList[0].RoleType;
+                List<MapLocator> linkedLocatorsList = new List<MapLocator>(aliveLinkedList.Select(data=>data.BelongToLocator));
+                removeLinkedList(aliveLinkedList);
+                var upgradeRolePlacedLocator = getUpgradeRolePlacedLocator(linkedLocatorsList);
+                addUpgradedRole(upgradeRolePlacedLocator,curRoleType);
                 moveDown();
-            } while (needReCall);
-            moveUp();
-            initSystemData();
+            }
 
-            void initSystemData() {
-                foreach (Role_Player readyPlacedRoleCtrl in roleGroup.AllReadyPlacedRoleCtrls) {
-                    readyPlacedRoleCtrl.Init();
+            void initRoleGroupRoles() {
+                foreach (var role in roleGroup.AllReadyPlacedRoleCtrls) {
+                    role.Init();
+                }
+            }
+            
+            void moveUp(out List<BaseRole_Player> abandonedRoles) {
+                // 将当前角色组放置到攻击区域中
+                // 如果攻击区域纵列已经满了，则纵列的首个角色将被抛弃
+                abandonedRoles = new List<BaseRole_Player>();
+                foreach (BaseRole_Player readyPlacedRoleCtrl in roleGroup.AllReadyPlacedRoleCtrls) {
+                    MapLocator        fromLocator       = readyPlacedRoleCtrl.BelongToLocator;
+                    Stack<MapLocator> columnMapLocators = new Stack<MapLocator>();
+                    do {
+                        columnMapLocators.Push(fromLocator);
+                        fromLocator = fromLocator.UpLocator;
+                    } while (fromLocator != null && fromLocator.HasRoleData);
+
+                    while (columnMapLocators.Count > 0) {
+                        var topLocator = columnMapLocators.Pop();
+                        var topRole    = topLocator.CurPlacedRoleCtrl;
+                        if (topLocator.UpLocator == null) {
+                            abandonedRoles.Add(topRole);
+                            topRole.SetNotPlacedOnLocator();
+                        }
+                        else {
+                            topRole.MoveToLocator(topLocator.UpLocator);
+                        }
+                    }
                 }
             }
 
-            void levelUp() {
-                for (var i = 0; i < roleGroup.AllReadyPlacedRoleCtrls.Count; i++) {
-                    var curPlayer            = roleGroup.AllReadyPlacedRoleCtrls[i];
-                    var allLinkedRolePlayers = getLinkedRolePlayers(curPlayer);
-                    curPlayer.LevelUp(allLinkedRolePlayers.Sum(data=>data.RoleCommonInfo.Lv));
-                    foreach (Role_Player linkedRolePlayer in allLinkedRolePlayers) {
-                        linkedRolePlayer.DestroySelf();
+            void abandonedRolesHandle(List<BaseRole_Player> abandonedRoles) {
+                foreach (var abandonedRole in abandonedRoles) {
+                    abandonedRole.DestroySelf();
+                }
+            }
+
+            bool checkLinkList(out List<BaseRole_Player> linkedList) {
+                linkedList = new List<BaseRole_Player>();
+                for (var i = 0; i < AllCanAttackMapLocators.Count; i++) {
+                    var curLocator           = AllCanAttackMapLocators[i];
+                    if (curLocator.HasRoleData == false) {
+                        continue;
                     }
-                    if (curPlayer.RoleCommonInfo.Lv >= curPlayer.MergeCount) {
-                        RoleTypes curRoleType     = curPlayer.RoleType;
-                        int       nextRoleTypeNum = (int) curRoleType + 1;
-                        if (System.Enum.IsDefined(typeof(RoleTypes), nextRoleTypeNum)) {
-                            var lastLocator = curPlayer.BelongToLocator;
-                            curPlayer.DestroySelf();
-                            
-                            RoleTypes nextRoleType = (RoleTypes)nextRoleTypeNum;
-                            var       nextRole = Instantiate(FightCtrl.I.RoleCreatorCtrlRef.GetRoleByType(nextRoleType) as Role_Player);
-                            nextRole.InitOnRoleGroup();
-                            nextRole.MoveToLocator(lastLocator);
-                            roleGroup.AllReadyPlacedRoleCtrls[i] = nextRole;
-                            needReCall                           = true;
+                    
+                    var curPlayer            = curLocator.CurPlacedRoleCtrl;
+                    linkedList.Clear();
+                    linkedList.AddRange(GetLinkedRolePlayers(curPlayer));
+                    if (linkedList.Count >= curPlayer.MergeCount) {
+                        return true;
+                    }
+                }
+                
+                return false;
+            }
+
+            void removeLinkedList(List<BaseRole_Player> linkedList) {
+                foreach (var roleCtrl in linkedList) {
+                    roleCtrl.DestroySelf();
+                }
+            }
+
+            MapLocator getUpgradeRolePlacedLocator(List<MapLocator> linkedLocatorsList) {
+                List<MapLocator> tempLinkedLocatorsLink = new List<MapLocator>(linkedLocatorsList);
+                tempLinkedLocatorsLink.Sort((a, b) => {
+                    Vector2Int aPos = a.Pos;
+                    Vector2Int bPos = b.Pos;
+                    if (aPos.x < bPos.x) {
+                        return -1;
+                    }
+                    else if (aPos.x == bPos.x) {
+                        if (aPos.y < bPos.y) {
+                            return -1;
                         }
-                        else {
-                            curPlayer.RoleCommonInfo.Lv = curPlayer.MergeCount;
-                        }
+                    }
+
+                    return 1;
+                });
+                return tempLinkedLocatorsLink[0];
+            }
+
+            void addUpgradedRole(MapLocator upgradeMapLocator, RoleTypeEnum curRoleType) {
+                int          nextRoleTypeNum = (int) curRoleType + 1;
+                if (System.Enum.IsDefined(typeof(RoleTypeEnum), nextRoleTypeNum)) {
+                    RoleTypeEnum nextRoleType = (RoleTypeEnum)nextRoleTypeNum;
+                    var          nextRole     = Instantiate(FightCtrl.I.RoleCreatorCtrlRef.GetRoleByType(nextRoleType) as BaseRole_Player);
+                    nextRole.InitOnRoleGroup();
+                    nextRole.MoveToLocator(upgradeMapLocator);
+                    nextRole.Init();
+
+                    var allowedRoleAbilityDatas = ScriptableAssetsCollection.I.AllRoleAbilityDatas.FindAll(data => data.AllowedRoleTypes.Contains(nextRole.RoleType)).GetRandomList(3);
+                    if (allowedRoleAbilityDatas.IsNullOrEmpty() == false) {
+                        FightCtrl.I.FightUIRef.OpenPlayerAbilityChoosePanel(nextRole, allowedRoleAbilityDatas);   
                     }
                 }
             }
 
             void moveDown() {
-                var allHasRoleDataCanAttackMapLocators = AllPlayerCanAttackMapLocators.FindAll(data => data.HasRoleData && data.DownLocator.IsCanAttackLocator && data.DownLocator.HasRoleData == false);
-                foreach (MapLocator hasRoleDataCanAttackMapLocator in allHasRoleDataCanAttackMapLocators) {
-                    var columnMapLocators = GetHasDataUpMapLocators(hasRoleDataCanAttackMapLocator).ToList();
+                bool needRecheckMoveDown = false;
+                do {
+                    needRecheckMoveDown = false;
+                    foreach (var canAttackMapLocator in AllCanAttackMapLocators) {
+                        if (canAttackMapLocator.HasRoleData && canAttackMapLocator.DownLocator.IsCanAttackLocator && canAttackMapLocator.DownLocator.HasRoleData == false) {
+                            Queue<MapLocator> columnMapLocators = new Queue<MapLocator>();
+                            var               downLocator       = canAttackMapLocator;
+                            do {
+                                columnMapLocators.Enqueue(downLocator);
+                                downLocator = downLocator.UpLocator;
+                            } while (downLocator != null && downLocator.HasRoleData);
 
-                    for (int i = columnMapLocators.Count - 1; i >= 0; i--) {
-                        var tempMapLocator = columnMapLocators[i];
-                        var player         = tempMapLocator.CurPlacedRoleCtrl;
-                        player.MoveToLocator(tempMapLocator.DownLocator);
-                    }
-                }
-            }
-            
-            void moveUp() {
-                for (var i = 0; i < roleGroup.AllReadyPlacedRoleCtrls.Count; i++) {
-                    var curPlayer  = roleGroup.AllReadyPlacedRoleCtrls[i];
-                    var curLocator = curPlayer.BelongToLocator;
-                    if (hasEmptyPlayerLocatorAtColumn(curLocator)) {
-                        var columnMapLocators = GetHasDataUpMapLocators(curLocator);
+                            while (columnMapLocators.Count > 0) {
+                                var tempMapLocator = columnMapLocators.Dequeue();
+                                var player         = tempMapLocator.CurPlacedRoleCtrl;
+                                player.MoveToLocator(tempMapLocator.DownLocator);
+                            }
 
-                        while (columnMapLocators.Count > 0) {
-                            var tempMapLocator = columnMapLocators.Pop();
-                            var player         = tempMapLocator.CurPlacedRoleCtrl;
-                            player.MoveToLocator(tempMapLocator.UpLocator);
+                            needRecheckMoveDown = true;
                         }
                     }
-                    else {
-                        curPlayer.DestroySelf();
-                    }
-                }
-            
-                roleGroup.DestroySelf();
-            }
-            
-            bool hasEmptyPlayerLocatorAtColumn(MapLocator mapLocator) {
-                foreach (MapLocator playerMapLocator in AllPlayerCanAttackMapLocators) {
-                    if (playerMapLocator.Pos.x == mapLocator.Pos.x) {
-                        if (playerMapLocator.HasRoleData == false) {
-                            return true;
-                        }
-                    }
-                }
-
-                return false;
+                } while (needRecheckMoveDown);
             }
         }
 
@@ -206,7 +266,7 @@ namespace Map {
 
             AllPlayerPreviewMapLocators   = new List<MapLocator>();
             AllPlayerMapLocators          = new List<MapLocator>();
-            AllPlayerCanAttackMapLocators = new List<MapLocator>();
+            AllCanAttackMapLocators = new List<MapLocator>();
             for (int i = 0; i < Editor_MapSize.x; i++) {
                 for (int j = 0; j < Editor_MapSize.y; j++) {
                     var mapLocator = PrefabUtility.InstantiatePrefab(Editor_MapLocatorPrefab) as MapLocator;
@@ -219,7 +279,7 @@ namespace Map {
                         AllPlayerPreviewMapLocators.Add(mapLocator);
                     }
                     else {
-                        AllPlayerCanAttackMapLocators.Add(mapLocator);
+                        AllCanAttackMapLocators.Add(mapLocator);
                     }
                     Vector3 localPos = new Vector3(startX + i * (prefabWidth + Editor_LocatorInterval.x), startY + j * (prefabHeight + Editor_LocatorInterval.y), 0);
                     mapLocator.transform.localPosition = localPos;

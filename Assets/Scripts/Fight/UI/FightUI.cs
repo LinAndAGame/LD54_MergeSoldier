@@ -3,6 +3,7 @@ using DG.Tweening;
 using MyGameUtility;
 using Player;
 using Role;
+using Role.Ability;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -56,7 +57,7 @@ namespace Fight {
             RefreshTotalHp(FightCtrl.I.Data.TotalHp);
             FightCtrl.I.Data.TotalHp.OnAnyValueChangedAfter.AddListener(() => { RefreshTotalHp(FightCtrl.I.Data.TotalHp); });
 
-            foreach (RoleCtrl playerRolePrefab in FightCtrl.I.RoleCreatorCtrlRef.AllPlayerRolePrefabs) {
+            foreach (BaseRoleCtrl playerRolePrefab in FightCtrl.I.RoleCreatorCtrlRef.AllPlayerRolePrefabs) {
                 var ins = Instantiate(PlayerRoleDetailInfoPrefab, RectTrans_PlayerRoleDetailInfos);
                 ins.Init(playerRolePrefab);
             }
@@ -107,13 +108,18 @@ namespace Fight {
             TMP_MaxEnemyLevelUpProcess.text  = fightProcess.Max.ToString();
         }
 
-        public void OpenPlayerAbilityChoosePanel(List<BasePlayerAbilityAsset> allAbilities) {
+        public void OpenPlayerAbilityChoosePanel(BaseRoleCtrl target, List<BaseRoleAbilityData> allAbilities) {
+            FightCtrl.I.Data.CurTimeScale.Current = 0;
             _PanelShowTweener?.Kill(true);
             RectTrans_AbilityPanel.gameObject.SetActive(true);
             RectTrans_AbilityPanel.localScale = Vector3.zero;
             _PanelShowTweener                 = RectTrans_AbilityPanel.DOScale(Vector3.one, 0.5f).SetEase(Ease.InSine).SetUpdate(true);
+            
+            foreach (var playerAbilityPanel in AllPlayerAbilityPanels) {
+                playerAbilityPanel.Hide();
+            }
             for (var i = 0; i < allAbilities.Count; i++) {
-                AllPlayerAbilityPanels[i].ShowAbility(allAbilities[i]);
+                AllPlayerAbilityPanels[i].ShowAbility(target, allAbilities[i]);
             }
         }
 

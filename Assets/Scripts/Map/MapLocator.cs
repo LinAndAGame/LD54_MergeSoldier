@@ -12,16 +12,16 @@ namespace Map {
         public HighlightEffect HighlightEffectRef;
         public SpriteRenderer  SR_Self;
 
-        public Role_Player CurPlacedRoleCtrl { get; set; }
+        public BaseRole_Player CurPlacedRoleCtrl { get; set; }
 
         public bool       HasRoleData  => CurPlacedRoleCtrl != null;
-        public MapLocator UpLocator    => FightCtrl.I.MapCtrlRef.AllMapLocators.Find(data => data.Pos == this.Pos + Vector2Int.up);
-        public MapLocator DownLocator  => FightCtrl.I.MapCtrlRef.AllMapLocators.Find(data => data.Pos == this.Pos + Vector2Int.down);
-        public MapLocator LeftLocator  => FightCtrl.I.MapCtrlRef.AllMapLocators.Find(data => data.Pos == this.Pos + Vector2Int.left);
-        public MapLocator RightLocator => FightCtrl.I.MapCtrlRef.AllMapLocators.Find(data => data.Pos == this.Pos + Vector2Int.right);
+        public MapLocator UpLocator    => FightCtrl.I.MapCtrlRef.GetUpAroundLocator(this);
+        public MapLocator DownLocator  => FightCtrl.I.MapCtrlRef.GetDownAroundLocator(this);
+        public MapLocator LeftLocator  => FightCtrl.I.MapCtrlRef.GetLeftAroundLocator(this);
+        public MapLocator RightLocator => FightCtrl.I.MapCtrlRef.GetRightAroundLocator(this);
 
-        public bool IsCanAttackLocator => FightCtrl.I.MapCtrlRef.AllPlayerCanAttackMapLocators.Contains(this);
-        public bool IsPreviewLocator   => FightCtrl.I.MapCtrlRef.AllPlayerPreviewMapLocators.Contains(this);
+        public bool IsCanAttackLocator => FightCtrl.I.MapCtrlRef.IsLocatorAtAttackArea(this);
+        public bool IsPreviewLocator   => FightCtrl.I.MapCtrlRef.IsLocatorAtPreviewArea(this);
 
         public List<MapLocator> AroundLocators {
             get {
@@ -34,10 +34,6 @@ namespace Map {
                 return result;
             }
         }
-
-        // private void OnMouseEnter() {
-        //     FightCtrl.I.PlayerCtrlRef.LastTouchedMapLocator = this;
-        // }
 
         public void DestroySelf() {
             if (Application.isPlaying) {

@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace Fight {
     public class RoleCreatorCtrl : MonoBehaviour {
-        public List<RoleCtrl> AllRolePrefabs;
+        public List<BaseRoleCtrl> AllRolePrefabs;
         
-        public List<RoleCtrl> AllPlayerRolePrefabs => AllRolePrefabs.FindAll(data=>data.CompareTag("Player"));
+        public List<BaseRoleCtrl> AllPlayerRolePrefabs => AllRolePrefabs.FindAll(data=>data.CompareTag("Player"));
 
-        public RoleCtrl GetRoleByType(RoleTypes roleType) {
+        public BaseRoleCtrl GetRoleByType(RoleTypeEnum roleType) {
             return AllRolePrefabs.Find(data => data.RoleType == roleType);
         }
     }

@@ -884,7 +884,9 @@
             </e>
           </e>
         </e>
-        <e p="Resources" t="Include" />
+        <e p="Resources" t="Include">
+          <e p="RoleAbilities" t="Include" />
+        </e>
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
           <e p="BgDatabaseCode" t="Include">
@@ -1033,6 +1035,11 @@
             <e p="SaveLoad" t="Include">
               <e p="SaveLoadUtility.cs" t="Include" />
             </e>
+            <e p="SimpleBuffSystem" t="Include">
+              <e p="BaseBuff.cs" t="Include" />
+              <e p="BaseBuffWithOwner.cs" t="Include" />
+              <e p="BuffSystem.cs" t="Include" />
+            </e>
             <e p="Singleton" t="Include">
               <e p="ClassSingletonSimple.cs" t="Include" />
               <e p="MonoSingletonSimple.cs" t="Include" />
@@ -1075,34 +1082,62 @@
             <e p="PlayerCtrl.cs" t="Include" />
           </e>
           <e p="Role" t="Include">
+            <e p="Ability" t="Include">
+              <e p="BaseRoleAbilityBuffWithData.cs" t="Include" />
+              <e p="BaseRoleAbilityData.cs" t="Include" />
+              <e p="ClusterBomb" t="Include">
+                <e p="Buff_ClusterBomb.cs" t="Include" />
+                <e p="Buff_ClusterBombHit.cs" t="Include" />
+                <e p="Data_ClusterBomb.cs" t="Include" />
+              </e>
+              <e p="LightningChain" t="Include">
+                <e p="Buff_LightingChain.cs" t="Include" />
+                <e p="Buff_LightingChainHit.cs" t="Include" />
+                <e p="Data_LightingChain.cs" t="Include" />
+              </e>
+            </e>
             <e p="Info" t="Include">
               <e p="BaseRoleInfo.cs" t="Include" />
               <e p="RoleCommonInfo.cs" t="Include" />
               <e p="RoleEvent.cs" t="Include" />
               <e p="RoleStateInfo.cs" t="Include" />
             </e>
+            <e p="IRoleCallBacks.cs" t="Include" />
+            <e p="RoleComponents" t="Include">
+              <e p="BaseRoleCom_TouchOthers.cs" t="Include" />
+              <e p="BaseRoleComponent.cs" t="Include" />
+              <e p="RoleCom_Animation.cs" t="Include" />
+              <e p="RoleCom_CloseAttackEnemy.cs" t="Include" />
+              <e p="RoleCom_FireBulletAttack.cs" t="Include" />
+              <e p="RoleCom_Move.cs" t="Include" />
+              <e p="RoleCom_Physical.cs" t="Include" />
+              <e p="RoleCom_UI.cs" t="Include" />
+              <e p="RoleCom_Vfx.cs" t="Include" />
+            </e>
+            <e p="RoleInternalSystems" t="Include">
+              <e p="BaseRoleInternalSystem.cs" t="Include" />
+              <e p="HpInternalSystem.cs" t="Include" />
+            </e>
             <e p="Roles" t="Include">
-              <e p="Role_Archer.cs" t="Include" />
-              <e p="Role_Enemy.cs" t="Include" />
-              <e p="Role_Player.cs" t="Include" />
-              <e p="Role_Soldier.cs" t="Include" />
-              <e p="RoleCtrl.cs" t="Include" />
+              <e p="BaseRole_Player.cs" t="Include" />
+              <e p="BaseRoleCtrl.cs" t="Include" />
+              <e p="Enemy" t="Include">
+                <e p="Role_Enemy.cs" t="Include" />
+              </e>
+              <e p="Player" t="Include">
+                <e p="Role_Archer.cs" t="Include" />
+                <e p="Role_AreaSupporting.cs" t="Include" />
+                <e p="Role_Soldier.cs" t="Include" />
+              </e>
             </e>
-            <e p="RoleTypes.cs" t="Include" />
-            <e p="Systems" t="Include">
-              <e p="BaseRoleSystem.cs" t="Include" />
-              <e p="RoleAnimationSystem.cs" t="Include" />
-              <e p="RoleBuffSystem.cs" t="Include" />
-              <e p="RoleEffectSystem.cs" t="Include" />
-              <e p="RoleHpSystem.cs" t="Include" />
-              <e p="RolePhysicalSystem.cs" t="Include" />
-              <e p="RoleUISystem.cs" t="Include" />
-            </e>
+            <e p="RoleTypeEnum.cs" t="Include" />
+            <e p="Systems" t="Include" />
           </e>
           <e p="RoleGroups" t="Include">
             <e p="RoleGroup.cs" t="Include" />
             <e p="RoleGroupCreator.cs" t="Include" />
           </e>
+          <e p="ScriptableAssetsCollection.cs" t="Include" />
           <e p="Test" t="Include">
             <e p="TestAddressable.cs" t="Include" />
           </e>

@@ -6,15 +6,20 @@ using UnityEngine;
 
 namespace Bullet {
     public class BulletCtrl : MonoBehaviour {
-        public float MoveSpeed = 5;
+        public CustomAction OnHitEnemy = new CustomAction();
+        
+        public float        MoveSpeed  = 5;
         
         private DamageInfo _DamageInfo;
         
-        public void Init(RoleCtrl roleCtrl) {
+        public BuffSystem BuffSystemRef { get; set; }
+        
+        public void Init(BaseRoleCtrl roleCtrl) {
             _DamageInfo             = new DamageInfo();
             _DamageInfo.DamageFrom  = roleCtrl;
             _DamageInfo.Damage      = roleCtrl.RoleCommonInfo.Damage.GetValue();
             this.transform.position = roleCtrl.transform.position;
+            BuffSystemRef           = new BuffSystem();
         }
 
         private void Update() {
@@ -25,6 +30,7 @@ namespace Bullet {
             if (other.CompareTag("Enemy")) {
                 Role_Enemy enemy = other.transform.GetComponent<Role_Enemy>();
                 enemy.BeHit(_DamageInfo);
+                OnHitEnemy.Invoke();
                 DestroySelf();
             }
             else if (other.CompareTag("Boundary")) {
