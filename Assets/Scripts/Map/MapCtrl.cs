@@ -41,6 +41,8 @@ namespace Map {
         public MapLocator GetAroundLocator(MapLocator original, Vector2Int dir) {
             return AllMapLocators.Find(data => data.Pos == original.Pos + dir);
         }
+
+        public List<BaseRole_Player> AllAttackAreaPlayers => AllCanAttackMapLocators.FindAll(data => data.HasRoleData).Select(data => data.CurPlacedPlayerRole).ToList();
         
         public List<BaseRole_Player> GetLinkedRolePlayers(BaseRole_Player rolePlayer) {
             List<BaseRole_Player>  result      = new List<BaseRole_Player>();
@@ -60,7 +62,7 @@ namespace Map {
                         continue;
                     }
 
-                    var aroundPlayer = aroundLocator.CurPlacedRoleCtrl;
+                    var aroundPlayer = aroundLocator.CurPlacedPlayerRole;
                     checkedList.Add(aroundLocator);
                     if (aroundLocator.HasRoleData && aroundPlayer.RoleType == rolePlayer.RoleType) {
                         result.Add(aroundPlayer);
@@ -134,7 +136,7 @@ namespace Map {
 
                     while (columnMapLocators.Count > 0) {
                         var topLocator = columnMapLocators.Pop();
-                        var topRole    = topLocator.CurPlacedRoleCtrl;
+                        var topRole    = topLocator.CurPlacedPlayerRole;
                         if (topLocator.UpLocator == null) {
                             abandonedRoles.Add(topRole);
                             topRole.SetNotPlacedOnLocator();
@@ -160,7 +162,7 @@ namespace Map {
                         continue;
                     }
                     
-                    var curPlayer            = curLocator.CurPlacedRoleCtrl;
+                    var curPlayer            = curLocator.CurPlacedPlayerRole;
                     linkedList.Clear();
                     linkedList.AddRange(GetLinkedRolePlayers(curPlayer));
                     if (linkedList.Count >= curPlayer.MergeCount) {
@@ -227,7 +229,7 @@ namespace Map {
 
                             while (columnMapLocators.Count > 0) {
                                 var tempMapLocator = columnMapLocators.Dequeue();
-                                var player         = tempMapLocator.CurPlacedRoleCtrl;
+                                var player         = tempMapLocator.CurPlacedPlayerRole;
                                 player.MoveToLocator(tempMapLocator.DownLocator);
                             }
 

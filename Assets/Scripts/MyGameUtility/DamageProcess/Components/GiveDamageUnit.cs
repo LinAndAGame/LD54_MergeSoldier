@@ -50,7 +50,7 @@ namespace MyGameUtility {
         private List<DamageObjData>                 _AllDamageObjDatas = new List<DamageObjData>();
         private float                               _NextRemoveTime;
         private HashSet<ReceiveDamageUnit<T,T3,T4>> _IgnoreBeDamageUnits = new HashSet<ReceiveDamageUnit<T,T3,T4>>();
-        private CustomEventCache                    _EventCache          = new CustomEventCache();
+        private CustomEventCollection                    _EventCache          = new CustomEventCollection();
         [CanBeNull]
         private Dictionary<ReceiveDamageUnit<T,T3,T4>, DamageObjData> _DetectionMap = new Dictionary<ReceiveDamageUnit<T,T3,T4>, DamageObjData>();
         private                                                                            int _CurInvokeTimes;

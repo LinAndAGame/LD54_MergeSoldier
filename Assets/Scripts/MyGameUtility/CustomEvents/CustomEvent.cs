@@ -31,11 +31,11 @@ public class CustomAction {
         return false;
     }
     
-    public void AddListener(Action action, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Action action, CustomEventCollection customEventMarkUtility = null) {
         AddListener(action, CustomEventAddInfo.Default, customEventMarkUtility);
     }
 
-    public void AddListener(Action action, CustomEventAddInfo addInfo, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Action action, CustomEventAddInfo addInfo, CustomEventCollection customEventMarkUtility = null) {
         if (action == null || addInfo.DefaultTimes <= 0) {
             return;
         }
@@ -129,11 +129,11 @@ public class CustomAction<T0> {
         return false;
     }
     
-    public void AddListener(Action<T0> action, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Action<T0> action, CustomEventCollection customEventMarkUtility = null) {
         AddListener(action, CustomEventAddInfo.Default, customEventMarkUtility);
     }
 
-    public void AddListener(Action<T0> action, CustomEventAddInfo addInfo, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Action<T0> action, CustomEventAddInfo addInfo, CustomEventCollection customEventMarkUtility = null) {
         if (action == null || addInfo.DefaultTimes <= 0) {
             return;
         }
@@ -227,11 +227,11 @@ public class CustomAction<T0,T1> {
         return false;
     }
     
-    public void AddListener(Action<T0,T1> action, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Action<T0,T1> action, CustomEventCollection customEventMarkUtility = null) {
         AddListener(action, CustomEventAddInfo.Default, customEventMarkUtility);
     }
 
-    public void AddListener(Action<T0,T1> action, CustomEventAddInfo addInfo, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Action<T0,T1> action, CustomEventAddInfo addInfo, CustomEventCollection customEventMarkUtility = null) {
         if (action == null || addInfo.DefaultTimes <= 0) {
             return;
         }
@@ -325,11 +325,11 @@ public class CustomAction<T0,T1,T2> {
         return false;
     }
     
-    public void AddListener(Action<T0,T1,T2> action, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Action<T0,T1,T2> action, CustomEventCollection customEventMarkUtility = null) {
         AddListener(action, CustomEventAddInfo.Default, customEventMarkUtility);
     }
 
-    public void AddListener(Action<T0,T1,T2> action, CustomEventAddInfo addInfo, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Action<T0,T1,T2> action, CustomEventAddInfo addInfo, CustomEventCollection customEventMarkUtility = null) {
         if (action == null || addInfo.DefaultTimes <= 0) {
             return;
         }
@@ -423,11 +423,11 @@ public class CustomAction<T0,T1,T2,T3> {
         return false;
     }
     
-    public void AddListener(Action<T0,T1,T2,T3> action, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Action<T0,T1,T2,T3> action, CustomEventCollection customEventMarkUtility = null) {
         AddListener(action, CustomEventAddInfo.Default, customEventMarkUtility);
     }
 
-    public void AddListener(Action<T0,T1,T2,T3> action, CustomEventAddInfo addInfo, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Action<T0,T1,T2,T3> action, CustomEventAddInfo addInfo, CustomEventCollection customEventMarkUtility = null) {
         if (action == null || addInfo.DefaultTimes <= 0) {
             return;
         }
@@ -521,11 +521,11 @@ public class CustomAction<T0,T1,T2,T3,T4> {
         return false;
     }
     
-    public void AddListener(Action<T0,T1,T2,T3,T4> action, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Action<T0,T1,T2,T3,T4> action, CustomEventCollection customEventMarkUtility = null) {
         AddListener(action, CustomEventAddInfo.Default, customEventMarkUtility);
     }
 
-    public void AddListener(Action<T0,T1,T2,T3,T4> action, CustomEventAddInfo addInfo, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Action<T0,T1,T2,T3,T4> action, CustomEventAddInfo addInfo, CustomEventCollection customEventMarkUtility = null) {
         if (action == null || addInfo.DefaultTimes <= 0) {
             return;
         }
@@ -619,11 +619,11 @@ public class CustomAction<T0,T1,T2,T3,T4,T5> {
         return false;
     }
     
-    public void AddListener(Action<T0,T1,T2,T3,T4,T5> action, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Action<T0,T1,T2,T3,T4,T5> action, CustomEventCollection customEventMarkUtility = null) {
         AddListener(action, CustomEventAddInfo.Default, customEventMarkUtility);
     }
 
-    public void AddListener(Action<T0,T1,T2,T3,T4,T5> action, CustomEventAddInfo addInfo, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Action<T0,T1,T2,T3,T4,T5> action, CustomEventAddInfo addInfo, CustomEventCollection customEventMarkUtility = null) {
         if (action == null || addInfo.DefaultTimes <= 0) {
             return;
         }
@@ -717,11 +717,11 @@ public class CustomAction<T0,T1,T2,T3,T4,T5,T6> {
         return false;
     }
     
-    public void AddListener(Action<T0,T1,T2,T3,T4,T5,T6> action, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Action<T0,T1,T2,T3,T4,T5,T6> action, CustomEventCollection customEventMarkUtility = null) {
         AddListener(action, CustomEventAddInfo.Default, customEventMarkUtility);
     }
 
-    public void AddListener(Action<T0,T1,T2,T3,T4,T5,T6> action, CustomEventAddInfo addInfo, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Action<T0,T1,T2,T3,T4,T5,T6> action, CustomEventAddInfo addInfo, CustomEventCollection customEventMarkUtility = null) {
         if (action == null || addInfo.DefaultTimes <= 0) {
             return;
         }
@@ -815,11 +815,11 @@ public class CustomAction<T0,T1,T2,T3,T4,T5,T6,T7> {
         return false;
     }
     
-    public void AddListener(Action<T0,T1,T2,T3,T4,T5,T6,T7> action, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Action<T0,T1,T2,T3,T4,T5,T6,T7> action, CustomEventCollection customEventMarkUtility = null) {
         AddListener(action, CustomEventAddInfo.Default, customEventMarkUtility);
     }
 
-    public void AddListener(Action<T0,T1,T2,T3,T4,T5,T6,T7> action, CustomEventAddInfo addInfo, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Action<T0,T1,T2,T3,T4,T5,T6,T7> action, CustomEventAddInfo addInfo, CustomEventCollection customEventMarkUtility = null) {
         if (action == null || addInfo.DefaultTimes <= 0) {
             return;
         }
@@ -913,11 +913,11 @@ public class CustomFunc<TOut> {
         return false;
     }
     
-    public void AddListener(Func<TOut> action, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Func<TOut> action, CustomEventCollection customEventMarkUtility = null) {
         AddListener(action, CustomEventAddInfo.Default, customEventMarkUtility);
     }
     
-    public void AddListener(Func<TOut> action, CustomEventAddInfo addInfo, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Func<TOut> action, CustomEventAddInfo addInfo, CustomEventCollection customEventMarkUtility = null) {
         if (action == null || addInfo.DefaultTimes <= 0) {
             return;
         }
@@ -1012,11 +1012,11 @@ public class CustomFunc<T0, TOut> {
         return false;
     }
     
-    public void AddListener(Func<T0, TOut> action, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Func<T0, TOut> action, CustomEventCollection customEventMarkUtility = null) {
         AddListener(action, CustomEventAddInfo.Default, customEventMarkUtility);
     }
     
-    public void AddListener(Func<T0, TOut> action, CustomEventAddInfo addInfo, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Func<T0, TOut> action, CustomEventAddInfo addInfo, CustomEventCollection customEventMarkUtility = null) {
         if (action == null || addInfo.DefaultTimes <= 0) {
             return;
         }
@@ -1111,11 +1111,11 @@ public class CustomFunc<T0, T1, TOut> {
         return false;
     }
     
-    public void AddListener(Func<T0, T1, TOut> action, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Func<T0, T1, TOut> action, CustomEventCollection customEventMarkUtility = null) {
         AddListener(action, CustomEventAddInfo.Default, customEventMarkUtility);
     }
     
-    public void AddListener(Func<T0, T1, TOut> action, CustomEventAddInfo addInfo, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Func<T0, T1, TOut> action, CustomEventAddInfo addInfo, CustomEventCollection customEventMarkUtility = null) {
         if (action == null || addInfo.DefaultTimes <= 0) {
             return;
         }
@@ -1210,11 +1210,11 @@ public class CustomFunc<T0, T1, T2, TOut> {
         return false;
     }
     
-    public void AddListener(Func<T0, T1, T2, TOut> action, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Func<T0, T1, T2, TOut> action, CustomEventCollection customEventMarkUtility = null) {
         AddListener(action, CustomEventAddInfo.Default, customEventMarkUtility);
     }
     
-    public void AddListener(Func<T0, T1, T2, TOut> action, CustomEventAddInfo addInfo, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Func<T0, T1, T2, TOut> action, CustomEventAddInfo addInfo, CustomEventCollection customEventMarkUtility = null) {
         if (action == null || addInfo.DefaultTimes <= 0) {
             return;
         }
@@ -1309,11 +1309,11 @@ public class CustomFunc<T0, T1, T2, T3, TOut> {
         return false;
     }
     
-    public void AddListener(Func<T0, T1, T2, T3, TOut> action, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Func<T0, T1, T2, T3, TOut> action, CustomEventCollection customEventMarkUtility = null) {
         AddListener(action, CustomEventAddInfo.Default, customEventMarkUtility);
     }
     
-    public void AddListener(Func<T0, T1, T2, T3, TOut> action, CustomEventAddInfo addInfo, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Func<T0, T1, T2, T3, TOut> action, CustomEventAddInfo addInfo, CustomEventCollection customEventMarkUtility = null) {
         if (action == null || addInfo.DefaultTimes <= 0) {
             return;
         }
@@ -1408,11 +1408,11 @@ public class CustomFunc<T0, T1, T2, T3, T4, TOut> {
         return false;
     }
     
-    public void AddListener(Func<T0, T1, T2, T3, T4, TOut> action, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Func<T0, T1, T2, T3, T4, TOut> action, CustomEventCollection customEventMarkUtility = null) {
         AddListener(action, CustomEventAddInfo.Default, customEventMarkUtility);
     }
     
-    public void AddListener(Func<T0, T1, T2, T3, T4, TOut> action, CustomEventAddInfo addInfo, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Func<T0, T1, T2, T3, T4, TOut> action, CustomEventAddInfo addInfo, CustomEventCollection customEventMarkUtility = null) {
         if (action == null || addInfo.DefaultTimes <= 0) {
             return;
         }
@@ -1507,11 +1507,11 @@ public class CustomFunc<T0, T1, T2, T3, T4, T5, TOut> {
         return false;
     }
     
-    public void AddListener(Func<T0, T1, T2, T3, T4, T5, TOut> action, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Func<T0, T1, T2, T3, T4, T5, TOut> action, CustomEventCollection customEventMarkUtility = null) {
         AddListener(action, CustomEventAddInfo.Default, customEventMarkUtility);
     }
     
-    public void AddListener(Func<T0, T1, T2, T3, T4, T5, TOut> action, CustomEventAddInfo addInfo, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Func<T0, T1, T2, T3, T4, T5, TOut> action, CustomEventAddInfo addInfo, CustomEventCollection customEventMarkUtility = null) {
         if (action == null || addInfo.DefaultTimes <= 0) {
             return;
         }
@@ -1606,11 +1606,11 @@ public class CustomFunc<T0, T1, T2, T3, T4, T5, T6, TOut> {
         return false;
     }
     
-    public void AddListener(Func<T0, T1, T2, T3, T4, T5, T6, TOut> action, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Func<T0, T1, T2, T3, T4, T5, T6, TOut> action, CustomEventCollection customEventMarkUtility = null) {
         AddListener(action, CustomEventAddInfo.Default, customEventMarkUtility);
     }
     
-    public void AddListener(Func<T0, T1, T2, T3, T4, T5, T6, TOut> action, CustomEventAddInfo addInfo, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Func<T0, T1, T2, T3, T4, T5, T6, TOut> action, CustomEventAddInfo addInfo, CustomEventCollection customEventMarkUtility = null) {
         if (action == null || addInfo.DefaultTimes <= 0) {
             return;
         }
@@ -1705,11 +1705,11 @@ public class CustomFunc<T0, T1, T2, T3, T4, T5, T6, T7, TOut> {
         return false;
     }
     
-    public void AddListener(Func<T0, T1, T2, T3, T4, T5, T6, T7, TOut> action, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Func<T0, T1, T2, T3, T4, T5, T6, T7, TOut> action, CustomEventCollection customEventMarkUtility = null) {
         AddListener(action, CustomEventAddInfo.Default, customEventMarkUtility);
     }
     
-    public void AddListener(Func<T0, T1, T2, T3, T4, T5, T6, T7, TOut> action, CustomEventAddInfo addInfo, CustomEventCache customEventMarkUtility = null) {
+    public void AddListener(Func<T0, T1, T2, T3, T4, T5, T6, T7, TOut> action, CustomEventAddInfo addInfo, CustomEventCollection customEventMarkUtility = null) {
         if (action == null || addInfo.DefaultTimes <= 0) {
             return;
         }

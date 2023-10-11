@@ -892,7 +892,12 @@
           <e p="BgDatabaseCode" t="Include">
             <e p="BgDatabaseAutoGenCode.cs" t="Include" />
           </e>
-          <e p="Buff" t="Include" />
+          <e p="Buff" t="Include">
+            <e p="AddBuffInfo.cs" t="Include" />
+            <e p="Buff_AddDamage.cs" t="Include" />
+            <e p="Buff_MapLocatorAddBuffToPlayer.cs" t="Include" />
+            <e p="BuffTypeEnum.cs" t="Include" />
+          </e>
           <e p="Bullet" t="Include">
             <e p="BulletCtrl.cs" t="Include" />
           </e>
@@ -927,7 +932,7 @@
               <e p="CustomEvent.cs" t="Include" />
               <e p="CustomEventAddInfo.cs" t="Include" />
               <e p="CustomEventAttribute.cs" t="Include" />
-              <e p="CustomEventCache.cs" t="Include" />
+              <e p="CustomEventCollection.cs" t="Include" />
               <e p="CustomEventMark.cs" t="Include" />
               <e p="CustomEventUtility.cs" t="Include" />
             </e>
@@ -1037,8 +1042,10 @@
             </e>
             <e p="SimpleBuffSystem" t="Include">
               <e p="BaseBuff.cs" t="Include" />
+              <e p="BaseBuffSystem.cs" t="Include" />
               <e p="BaseBuffWithOwner.cs" t="Include" />
-              <e p="BuffSystem.cs" t="Include" />
+              <e p="BuffCollection.cs" t="Include" />
+              <e p="BuffSystemDefault.cs" t="Include" />
             </e>
             <e p="Singleton" t="Include">
               <e p="ClassSingletonSimple.cs" t="Include" />
@@ -1107,10 +1114,12 @@
               <e p="BaseRoleCom_TouchOthers.cs" t="Include" />
               <e p="BaseRoleComponent.cs" t="Include" />
               <e p="RoleCom_Animation.cs" t="Include" />
+              <e p="RoleCom_AreaPlayerAddBuff.cs" t="Include" />
               <e p="RoleCom_CloseAttackEnemy.cs" t="Include" />
               <e p="RoleCom_FireBulletAttack.cs" t="Include" />
               <e p="RoleCom_Move.cs" t="Include" />
               <e p="RoleCom_Physical.cs" t="Include" />
+              <e p="RoleCom_TargetAddBuff.cs" t="Include" />
               <e p="RoleCom_UI.cs" t="Include" />
               <e p="RoleCom_Vfx.cs" t="Include" />
             </e>
@@ -1128,6 +1137,7 @@
                 <e p="Role_Archer.cs" t="Include" />
                 <e p="Role_AreaSupporting.cs" t="Include" />
                 <e p="Role_Soldier.cs" t="Include" />
+                <e p="Role_TargetSupporting.cs" t="Include" />
               </e>
             </e>
             <e p="RoleTypeEnum.cs" t="Include" />

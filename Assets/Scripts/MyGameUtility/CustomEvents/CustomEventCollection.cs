@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
 namespace MyGameUtility {
-    public class CustomEventCache {
+    public class CustomEventCollection {
         private List<CustomEventMark> _AllCache = new List<CustomEventMark>();
         
         public void Add(CustomEventMark target) {

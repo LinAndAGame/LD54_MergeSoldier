@@ -9,9 +9,9 @@ namespace Role {
             SetEnable(true);
         }
 
-        public override void InitOnRoleGroup() {
-            SetEnable(false);
-        }
+        // public override void InitOnRoleGroup() {
+        //     SetEnable(false);
+        // }
 
         public override void DoOnDeath() {
             SetEnable(false);

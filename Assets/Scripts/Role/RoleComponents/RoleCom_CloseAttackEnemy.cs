@@ -12,15 +12,14 @@ namespace Role {
 
         public ValueCacheFloat AttackCD { get; set; }
 
-        protected ValueCacheCollection  VCC_AttackCD      = new ValueCacheCollection();
         protected HashSet<BaseRoleCtrl> AllTouchedPlayers = new HashSet<BaseRoleCtrl>();
 
         public override void Init() {
             base.Init();
-            AttackCD = new ValueCacheFloat(DefaultAttackCD);
+            AttackCD = DefaultAttackCD;
         }
 
-        public override void EffectHandle() {
+        public override void EffectHandleInternal() {
             if (CanAttack() == false) {
                 return;
             }
@@ -31,7 +30,7 @@ namespace Role {
         }
 
         protected virtual bool CanAttack() {
-            return Owner.RoleStateInfoRef.CanAttack.GetValue() && AllTouchedPlayers.Count != 0;
+            return CanEffectHandle && Owner.RoleStateInfoRef.CanAttack.GetValue() && AllTouchedPlayers.Count != 0;
         }
 
         protected virtual void OtherSystemAttackEffectHandle() {
@@ -48,13 +47,13 @@ namespace Role {
         }
 
         protected virtual void AttackCDHandle() {
-            VCC_AttackCD.Add(Owner.RoleStateInfoRef.CanAttack.GetCacheElement());
+            VCC_CanEffectHandle.Add(Owner.RoleStateInfoRef.CanAttack.GetCacheElement());
 
             Owner.StartCoroutine(delaySetCanAttack());
 
             IEnumerator delaySetCanAttack() {
                 yield return new WaitForSeconds(AttackCD.GetValue());
-                VCC_AttackCD.Clear();
+                VCC_CanEffectHandle.Clear();
             }
         }
 

@@ -2,10 +2,10 @@
 
 namespace Role {
     public class RoleStateInfo : BaseRoleInfo {
-        public ValueCacheBool CanBeHit = new ValueCacheBool(true);
-        public ValueCacheBool CanDeath = new ValueCacheBool(true);
-        public ValueCacheBool CanAttack = new ValueCacheBool(true);
-        public ValueCacheBool CanMove = new ValueCacheBool(true);
+        public ValueCacheBool CanBeHit = true;
+        public ValueCacheBool CanDeath = true;
+        public ValueCacheBool CanAttack = true;
+        public ValueCacheBool CanMove = true;
 
         public bool IsDeath;
         

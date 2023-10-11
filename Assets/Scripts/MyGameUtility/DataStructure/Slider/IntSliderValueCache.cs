@@ -19,9 +19,9 @@ namespace MyGameUtility {
         public bool IsEqualMax => Current == Max;
 
         public IntSliderValueCache(int min, int max, int defaultValue) {
-            _MinCache     = new ValueCacheInt(min);
-            _MaxCache     = new ValueCacheInt(max);
-            _CurrentCache = new ValueCacheInt(defaultValue);
+            _MinCache     = min;
+            _MaxCache     = max;
+            _CurrentCache = defaultValue;
 
             _MinCache.OnValueChanged += ()=> {
                 OnMinChanged?.Invoke();

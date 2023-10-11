@@ -15,7 +15,7 @@ namespace Role {
 
             // 属性数值更新
             RoleCommonInfo        = new RoleCommonInfo(this);
-            RoleCommonInfo.Damage = new ValueCacheFloat(1);
+            RoleCommonInfo.Damage = 1;
             RoleCommonInfo.Lv     = FightCtrl.I.Data.CurEnemyLv.Current;
 
             RoleStateInfoRef = new RoleStateInfo(this);

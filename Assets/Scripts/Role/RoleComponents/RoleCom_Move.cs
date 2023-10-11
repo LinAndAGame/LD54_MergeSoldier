@@ -9,7 +9,7 @@ namespace Role {
         
         public float MoveSpeed = 0.5f;
 
-        public ValueCacheBool CanMove = new ValueCacheBool(true);
+        public ValueCacheBool CanMove = true;
 
         private   ValueCacheCollection  _VCC_Move         = new ValueCacheCollection();
         protected HashSet<BaseRoleCtrl> AllTouchedPlayers = new HashSet<BaseRoleCtrl>();
@@ -44,8 +44,8 @@ namespace Role {
             }
         }
 
-        public override void EffectHandle() {
-            base.EffectHandle();
+        public override void EffectHandleInternal() {
+            base.EffectHandleInternal();
             if (CanMove.GetValue()) {
                 this.transform.position = Vector3.MoveTowards(this.transform.position, this.transform.position + Vector3.down * 10, Time.fixedDeltaTime * MoveSpeed);
             }

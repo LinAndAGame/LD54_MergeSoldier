@@ -1,6 +1,6 @@
 ﻿namespace MyGameUtility {
     public class ValueCacheFloat : BaseValueCacheNumber<float> {
-        public ValueCacheFloat(float originalValue) : base(originalValue) { }
+        private ValueCacheFloat(float originalValue) : base(originalValue) { }
         
         public override float GetValue() {
             float result = _OriginalValue;
@@ -33,6 +33,14 @@
         public static ValueCacheFloat operator /(ValueCacheFloat a, float b) {
             a._OriginalValue *= b;
             return a;
+        }
+
+        public static implicit operator float(ValueCacheFloat target) {
+            return target.GetValue();
+        }
+
+        public static implicit operator ValueCacheFloat(float target) {
+            return new ValueCacheFloat(target);
         }
     }
 }

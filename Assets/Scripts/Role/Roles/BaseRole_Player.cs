@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace Role {
     public abstract class BaseRole_Player : BaseRoleCtrl {
+        public CustomAction<MapLocator> OnMoveToOtherLocator = new CustomAction<MapLocator>();
+        public CustomAction<MapLocator> OnLeftLocator = new CustomAction<MapLocator>();
+        
         public int   MergeCount         = 2;
         public float MoveToLocatorSpeed = 0.5f;
 
@@ -19,7 +22,8 @@ namespace Role {
 
         public void SetNotPlacedOnLocator() {
             if (BelongToLocator != null) {
-                BelongToLocator.CurPlacedRoleCtrl = null;
+                OnLeftLocator.Invoke(BelongToLocator);
+                BelongToLocator.CurPlacedPlayerRole = null;
                 BelongToLocator                   = null;
             }
         }
@@ -28,7 +32,8 @@ namespace Role {
             SetNotPlacedOnLocator();
 
             BelongToLocator                   = mapLocator;
-            BelongToLocator.CurPlacedRoleCtrl = this;
+            BelongToLocator.CurPlacedPlayerRole = this;
+            OnMoveToOtherLocator.Invoke(BelongToLocator);
         }
 
         public void MoveToLocator(MapLocator mapLocator) {

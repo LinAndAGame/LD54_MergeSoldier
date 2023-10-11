@@ -8,6 +8,8 @@ namespace Role {
         public string   DeathAnimationName;
         public string   BeHitAnimationName;
         public string   AttackAnimationName;
+        
+        
 
         public void PlayDeathAnimation() {
             PlayAnimation(DeathAnimationName);

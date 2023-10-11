@@ -1,6 +1,6 @@
 ﻿namespace MyGameUtility {
     public class ValueCacheInt : BaseValueCacheNumber<int> {
-        public ValueCacheInt(int originalValue) : base(originalValue) { }
+        private ValueCacheInt(int originalValue) : base(originalValue) { }
         
         public override int GetValue() {
             int result = _OriginalValue;
@@ -33,6 +33,14 @@
         public static ValueCacheInt operator /(ValueCacheInt a, int b) {
             a._OriginalValue *= b;
             return a;
+        }
+
+        public static implicit operator int(ValueCacheInt target) {
+            return target.GetValue();
+        }
+
+        public static implicit operator ValueCacheInt(int target) {
+            return new ValueCacheInt(target);
         }
     }
 }

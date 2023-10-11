@@ -5,112 +5,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53e49cda-0e78-48dc-88f6-bb4588b14bd8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare2023_9/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/RoleAbilities.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/RoleAbilities/闪电链Data.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/RoleAbilities/闪电链Data.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/资源集合.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/资源集合.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BaseBuff.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BaseBuff.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BaseBuffWithOwner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BaseBuffWithOwner.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BuffSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BuffSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/BaseRoleAbilityBuffWithData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/BaseRoleAbilityBuffWithData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/BaseRoleAbilityData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/BaseRoleAbilityData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/ClusterBomb.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/ClusterBomb/Buff_ClusterBomb.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/ClusterBomb/Buff_ClusterBomb.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/ClusterBomb/Buff_ClusterBombHit.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/ClusterBomb/Buff_ClusterBombHit.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/ClusterBomb/Data_ClusterBomb.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/ClusterBomb/Data_ClusterBomb.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/LightningChain.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/LightningChain/Buff_LightingChain.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/LightningChain/Buff_LightingChain.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/LightningChain/Buff_LightingChainHit.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/LightningChain/Buff_LightingChainHit.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/LightningChain/Data_LightingChain.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/LightningChain/Data_LightingChain.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/IRoleCallBacks.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/IRoleCallBacks.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/BaseRoleCom_TouchOthers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/BaseRoleCom_TouchOthers.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/BaseRoleComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/BaseRoleComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_CloseAttackEnemy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_CloseAttackEnemy.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_FireBulletAttack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_FireBulletAttack.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Move.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Move.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleInternalSystems.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleInternalSystems/BaseRoleInternalSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleInternalSystems/BaseRoleInternalSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRole_Player.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Enemy.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/Role_AreaSupporting.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/Role_AreaSupporting.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableAssetsCollection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableAssetsCollection.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Buff/AddBuffInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Buff/AddBuffInfo.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Buff/BuffTypeEnum.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Buff/BuffTypeEnum.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Buff/Buff_AddDamage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Buff/Buff_AddDamage.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Buff/Buff_MapLocatorAddBuffToPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Buff/Buff_MapLocatorAddBuffToPlayer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BuffCollection.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BuffCollection.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BuffSystemDefault.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BuffSystemDefault.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_AreaPlayerAddBuff.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_AreaPlayerAddBuff.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_TargetAddBuff.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_TargetAddBuff.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/Role_TargetSupporting.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/Role_TargetSupporting.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare2023_9/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare2023_9/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare2023_9/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare2023_9/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.plastic/plastic.changes" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.changes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet/BulletCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet/BulletCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DamageProcess/DamageInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DamageProcess/DamageInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyCreatorCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyCreatorCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fight/FightCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fight/FightCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fight/RoleCreatorCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fight/RoleCreatorCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fight/UI/FightUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fight/UI/FightUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fight/UI/Panel_PlayerAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fight/UI/Panel_PlayerAbility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Fight/UI/Panel_PlayerRoleDetailInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Fight/UI/Panel_PlayerRoleDetailInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/MapCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/MapCtrl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/MapLocator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/MapLocator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/DataStructure/ValueCache/ValueCacheCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/DataStructure/ValueCache/ValueCacheCollection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/MyGameExpand/APIExpandCSharp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/MyGameExpand/APIExpandCSharp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/CustomEvents/CustomEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/CustomEvents/CustomEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/CustomEvents/CustomEventCache.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/CustomEvents/CustomEventCollection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/CustomEvents/CustomEventCache.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/CustomEvents/CustomEventCollection.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/DamageProcess/Components/GiveDamageUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/DamageProcess/Components/GiveDamageUnit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/DataStructure/Slider/IntSliderValueCache.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/DataStructure/Slider/IntSliderValueCache.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/DataStructure/ValueCache/ValueCacheBool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/DataStructure/ValueCache/ValueCacheBool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/DataStructure/ValueCache/ValueCacheFloat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/DataStructure/ValueCache/ValueCacheFloat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/DataStructure/ValueCache/ValueCacheInt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/DataStructure/ValueCache/ValueCacheInt.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BaseBuff.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BaseBuff.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BaseBuffWithOwner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BaseBuffWithOwner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BuffSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BaseBuffSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BuffSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BaseBuffSystem.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAbilityAsset_AtkUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAbilityAsset_AtkUp.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAbilityAsset_HpUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAbilityAsset_HpUp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Info/BaseRoleInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Info/BaseRoleInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/BaseRoleAbilityBuffWithData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/BaseRoleAbilityBuffWithData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/ClusterBomb/Buff_ClusterBomb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/ClusterBomb/Buff_ClusterBomb.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/ClusterBomb/Buff_ClusterBombHit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/ClusterBomb/Buff_ClusterBombHit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/LightningChain/Buff_LightingChain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/LightningChain/Buff_LightingChain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/LightningChain/Buff_LightingChainHit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Ability/LightningChain/Buff_LightingChainHit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Info/RoleCommonInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Info/RoleCommonInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Info/RoleEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Info/RoleEvent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Info/RoleStateInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Info/RoleStateInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/RoleTypes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleTypeEnum.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/RoleTypes.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleTypeEnum.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/RoleCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRoleCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/RoleCtrl.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRoleCtrl.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Role_Archer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/Role_Archer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Role_Archer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/Role_Archer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Role_Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Enemy/Role_Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Role_Enemy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Enemy/Role_Enemy.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Role_Player.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Role_Player.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRole_Player.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Role_Soldier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/Role_Soldier.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Role_Soldier.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/Role_Soldier.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Systems/BaseRoleSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Systems/BaseRoleSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Systems/RoleAnimationSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Animation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Systems/RoleAnimationSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Animation.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Systems/RoleBuffSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Systems/RoleBuffSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Systems/RoleEffectSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Vfx.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Systems/RoleEffectSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Vfx.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Systems/RoleHpSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleInternalSystems/HpInternalSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Systems/RoleHpSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleInternalSystems/HpInternalSystem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Systems/RolePhysicalSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Physical.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Systems/RolePhysicalSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Physical.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Systems/RoleUISystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_UI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Systems/RoleUISystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_UI.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RoleGroups/RoleGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RoleGroups/RoleGroup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/BaseRoleComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/BaseRoleComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Animation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Animation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_CloseAttackEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_CloseAttackEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_FireBulletAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_FireBulletAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Move.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Move.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Physical.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Physical.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_UI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_UI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRoleCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRoleCtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRole_Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRole_Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Enemy/Role_Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Enemy/Role_Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/Role_Archer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/Role_Archer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/Role_AreaSupporting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/Role_AreaSupporting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/Role_Soldier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/Role_Soldier.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,57 +99,57 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableAssetsCollection.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Ability/LightningChain/Buff_LightingChain.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Ability/LightningChain/Data_LightingChain.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Ability/LightningChain/Buff_LightingChainHit.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Ability/ClusterBomb/Buff_ClusterBomb.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Ability/ClusterBomb/Data_ClusterBomb.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Ability/ClusterBomb/Buff_ClusterBombHit.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Fight/UI/FightUI.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Fight/UI/Panel_PlayerAbility.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/Role_AreaSporting.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Roles/RoleCtrl.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRole_Supporting.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyCreatorCtrl.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/BaseRole_PlayerAttack.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Role_Player.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRole_AttackEnemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Systems/RoleHpSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/EffectHandle/BaseRoleEffectHandle.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Systems/BaseRoleSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/IRoleComponent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Systems/RoleAnimationSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/BaseRoleComponent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Systems/RoleEffectSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Systems/RolePhysicalSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Systems/RoleUISystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/IRoleComponentCallBacks.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/IRoleCallBacks.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleInternalSystems/BaseRoleInternalSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleInternalSystems/RoleHpSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleInternalSystems/HpInternalSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Animation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Vfx.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Physical.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_UI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Role/EffectHandle/EffectHandle_AttackEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Role/EffectHandle/RoleCom_AttackEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Role/EffectHandle/EffectHandle_Move.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Role/EffectHandle/RoleCom_Move.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Move.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_TouchOthers.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/BaseRoleCom_TouchOthers.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_AttackEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_FireBullet.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_CloseAttackEnemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_FireBulletAttack.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRole_Player.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/Role_AreaSupporting.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRoleCtrl.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/DataStructure/ValueCache/ValueCacheFloat.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/DataStructure/ValueCache/ValueCacheInt.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/DataStructure/ValueCache/ValueCacheBool.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Info/RoleCommonInfo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Info/RoleStateInfo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Move.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Enemy/Role_Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/DataStructure/Slider/IntSliderValueCache.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/Role_Archer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/Role_Soldier.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Buff/BuffEnum.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/IHaveBuffSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRole_Player.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BaseBuffWithOwner.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Ability/ClusterBomb/Buff_ClusterBomb.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Ability/ClusterBomb/Buff_ClusterBombHit.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Ability/LightningChain/Buff_LightingChain.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Ability/BaseRoleAbilityBuffWithData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Ability/ClusterBomb/Data_ClusterBomb.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Ability/LightningChain/Buff_LightingChainHit.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Buff/Buff_AddDamage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BuffSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BuffSystemDefault.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bullet/BulletCtrl.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Buff/AddBuffInfo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Animation.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/IRoleCallBacks.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_UI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Physical.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_CloseAttackEnemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Map/MapCtrl.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_TargetAddBuff.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BuffCollection.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_AreaPlayerAddBuff.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_FireBulletAttack.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BaseBuff.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Buff/Buff_MapLocatorAddBuffToPlayer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/Role_AreaSupporting.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRoleCtrl.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Roles/Player/Role_TargetSupporting.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/BaseRoleComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BaseBuffSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Map/MapLocator.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2WSYVq1vmZMYuvyFrwVXqDHa5BI" />
@@ -254,7 +205,8 @@
       <workItem from="1696753620127" duration="7387000" />
       <workItem from="1696817015781" duration="21541000" />
       <workItem from="1696899984058" duration="8756000" />
-      <workItem from="1696932743705" duration="409000" />
+      <workItem from="1696932743705" duration="765000" />
+      <workItem from="1696991018566" duration="18640000" />
     </task>
     <task id="LOCAL-00001" summary="修复工具集中Addressable对象池bug">
       <created>1696746025682</created>
@@ -263,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696746025682</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="重构角色Com系统">
+      <created>1696934012020</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696934012020</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -284,7 +243,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="修复工具集中Addressable对象池bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复工具集中Addressable对象池bug" />
+    <MESSAGE value="重构角色Com系统" />
+    <option name="LAST_COMMIT_MESSAGE" value="重构角色Com系统" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

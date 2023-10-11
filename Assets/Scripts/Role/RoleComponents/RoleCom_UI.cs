@@ -11,10 +11,10 @@ namespace Role {
         public Slider          Sld_Hp;
         public TextMeshProUGUI TMP_Lv;
         
-        public override void InitOnRoleGroup() {
-            base.InitOnRoleGroup();
-            CanvasRef.gameObject.SetActive(false);
-        }
+        // public override void InitOnRoleGroup() {
+        //     base.InitOnRoleGroup();
+        //     CanvasRef.gameObject.SetActive(false);
+        // }
 
         public override void Init() {
             CanvasRef.gameObject.SetActive(true);

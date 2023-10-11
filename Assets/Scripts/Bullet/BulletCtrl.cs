@@ -12,14 +12,14 @@ namespace Bullet {
         
         private DamageInfo _DamageInfo;
         
-        public BuffSystem BuffSystemRef { get; set; }
+        public BaseBuffSystem BuffSystemRef { get; set; }
         
         public void Init(BaseRoleCtrl roleCtrl) {
             _DamageInfo             = new DamageInfo();
             _DamageInfo.DamageFrom  = roleCtrl;
             _DamageInfo.Damage      = roleCtrl.RoleCommonInfo.Damage.GetValue();
             this.transform.position = roleCtrl.transform.position;
-            BuffSystemRef           = new BuffSystem();
+            BuffSystemRef           = new BuffSystemDefault();
         }
 
         private void Update() {

@@ -2,7 +2,7 @@
 
 namespace Role {
     public class Role_Soldier : BaseRole_Player {
-        public RoleCom_CloseAttackEnemy AttackEnemyCom;
+        public RoleCom_CloseAttackEnemy CloseAttackEnemyCom;
 
         public override void Init() {
             float maxHp = BaseHp;
@@ -12,7 +12,7 @@ namespace Role {
 
         protected override void Editor_SetProperties() {
             base.Editor_SetProperties();
-            Editor_InitRoleCom<RoleCom_CloseAttackEnemy, BaseRoleCtrl>(ref AttackEnemyCom);
+            Editor_InitRoleCom<RoleCom_CloseAttackEnemy, BaseRoleCtrl>(ref CloseAttackEnemyCom);
         }
     }
 }

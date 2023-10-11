@@ -1,9 +1,12 @@
-﻿namespace MyGameUtility {
-    public class BaseBuffWithOwner<T> : BaseBuff {
-        protected T Owner;
+﻿using System;
+using System.Collections.Generic;
 
-        public BaseBuffWithOwner(T owner) {
-            Owner = owner;
+namespace MyGameUtility {
+    public class BaseBuffWithOwner<T> : BaseBuff {
+        protected T DataOwner;
+
+        public BaseBuffWithOwner(T dataOwner, int layer) : base(layer) {
+            DataOwner = dataOwner;
         }
     }
 }

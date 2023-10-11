@@ -20,7 +20,7 @@ namespace Role {
         public RoleCommonInfo   RoleCommonInfo;
         public RoleStateInfo    RoleStateInfoRef;
         public RoleEvent        RoleEventRef;
-        public BuffSystem       BuffSystemRef = new BuffSystem();
+        public BaseBuffSystem       BuffSystemRef = new BuffSystemDefault();
 
         protected bool _HasInit;
 
@@ -95,6 +95,7 @@ namespace Role {
 #if UNITY_EDITOR
         [Button]
         protected virtual void Editor_SetProperties() {
+            // 优化
             AllRoleSystems.Clear();
             Editor_InitRoleCom<RoleCom_Animation,BaseRoleCtrl>(ref RoleAnimationSystemRef);
             Editor_InitRoleCom<RoleCom_Vfx,BaseRoleCtrl>(ref RoleComVfxRef);

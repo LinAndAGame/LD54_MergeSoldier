@@ -2,7 +2,7 @@
     public class ValueCacheBool : BaseValueCache<bool> {
         private bool _OriginalValue;
         
-        public ValueCacheBool(bool originalValue) {
+        private ValueCacheBool(bool originalValue) {
             _OriginalValue = originalValue;
         }
         
@@ -15,6 +15,14 @@
 
         public override bool GetValue() {
             return ElementCaches.Count == 0 ? _OriginalValue : !_OriginalValue;
+        }
+
+        public static implicit operator bool(ValueCacheBool a) {
+            return a.GetValue();
+        }
+
+        public static implicit operator ValueCacheBool(bool data) {
+            return new ValueCacheBool(data);
         }
     }
 }

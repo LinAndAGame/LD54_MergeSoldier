@@ -14,9 +14,9 @@ namespace Player {
             base.ApplyAbility();
             var temp = FightCtrl.I.MapCtrlRef.AllCanAttackMapLocators.FindAll(data => data.HasRoleData);
             foreach (MapLocator mapLocator in temp) {
-                if (AllRoleTypes.Contains(mapLocator.CurPlacedRoleCtrl.RoleType)) {
-                    mapLocator.CurPlacedRoleCtrl.HpInternalSystemRef.Hp.Max += UpValue;
-                    mapLocator.CurPlacedRoleCtrl.HpInternalSystemRef.Hp.Current += UpValue;
+                if (AllRoleTypes.Contains(mapLocator.CurPlacedPlayerRole.RoleType)) {
+                    mapLocator.CurPlacedPlayerRole.HpInternalSystemRef.Hp.Max += UpValue;
+                    mapLocator.CurPlacedPlayerRole.HpInternalSystemRef.Hp.Current += UpValue;
                 }
             }
         }
