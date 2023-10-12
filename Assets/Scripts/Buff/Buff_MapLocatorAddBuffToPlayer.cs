@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Map;
 using MyGameUtility;
+using Role;
 
 namespace Buff {
     public class Buff_MapLocatorAddBuffToPlayer : BaseBuffWithOwner<MapLocator> {
@@ -12,14 +13,28 @@ namespace Buff {
 
         protected override void InitInternal() {
             base.InitInternal();
+
+            resetBuff();
             DataOwner.OnPlayerLeft.AddListener(data => {
                 BC.Clear();
             }, CEC);
-            DataOwner.OnPlayerPlaced.AddListener(rolePlayer => {
-                foreach (var addBuffInfo in _AllReadyAddedBuffInfos) {
-                    BC.Add(addBuffInfo.GetBuff(rolePlayer));
+            DataOwner.OnPlayerPlaced.AddListener(addBuff, CEC);
+            OnLayerChanged.AddListener(resetBuff, CEC);
+
+            void resetBuff() {
+                BC.Clear();
+                if (DataOwner.HasRoleData) {
+                    addBuff(DataOwner.CurPlacedPlayerRole);
                 }
-            }, CEC);
+            }
+
+            void addBuff(BaseRole_Player rolePlayer) {
+                foreach (var addBuffInfo in _AllReadyAddedBuffInfos) {
+                    var buff = addBuffInfo.GetBuff(rolePlayer);
+                    buff.Layer *= this.Layer;
+                    rolePlayer.BuffSystemRef.AddBuff(buff, BC);
+                }
+            }
         }
     }
 }

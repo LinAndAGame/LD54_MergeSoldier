@@ -6,12 +6,10 @@ namespace Buff {
         public Buff_AddDamage(BaseRoleCtrl dataOwner, int layer) : base(dataOwner, layer) { }
 
         protected override void InitInternal() {
-            addDamage();
-            OnMerged.AddListener(() => {
-                addDamage();
-            }, CEC);
+            resetBuff();
+            OnLayerChanged.AddListener(resetBuff, CEC);
 
-            void addDamage() {
+            void resetBuff() {
                 VCC.Clear();
                 VCC.Add(DataOwner.RoleCommonInfo.Damage.GetCacheElement(Layer));
             }

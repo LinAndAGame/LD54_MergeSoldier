@@ -10,9 +10,6 @@ namespace RoleGroups {
 
         public void Init() {
             AllReadyPlacedRoleCtrls = this.GetComponentsInChildren<BaseRole_Player>().ToList();
-            foreach (BaseRole_Player readyPlacedRoleCtrl in AllReadyPlacedRoleCtrls) {
-                readyPlacedRoleCtrl.InitOnRoleGroup();
-            }
             Hide();
         }
         

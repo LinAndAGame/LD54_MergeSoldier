@@ -8,23 +8,16 @@ namespace Role {
         public RoleCom_Move        MoveCom;
 
         public override void Init() {
-            _HasInit = true;
-            
             this.transform.SetParent(FightCtrl.I.EnemyCreatorCtrlRef.transform);
-            RoleComVfxRef.SR_Self.color = RoleComVfxRef.SR_Self.color.SetA(1);
+            base.Init();
 
             // 属性数值更新
-            RoleCommonInfo        = new RoleCommonInfo(this);
-            RoleCommonInfo.Damage = 1;
+            RoleCommonInfo.Damage = BaseDamage;
             RoleCommonInfo.Lv     = FightCtrl.I.Data.CurEnemyLv.Current;
-
-            RoleStateInfoRef = new RoleStateInfo(this);
-            RoleEventRef     = new RoleEvent(this);
+            RoleEventRef.OnDeathSucceed.AddListener(() => { FightCtrl.I.Data.FightProcess.Current++; });
 
             float maxHp = StandardLevelHp_V1.FindEntity(data => data.f_Lv == RoleCommonInfo.Lv).f_Hp;
             HpInternalSystemRef.Hp = new MinMaxValueFloat(0, maxHp, maxHp);
-
-            RoleEventRef.OnDeathSucceed.AddListener(() => { FightCtrl.I.Data.FightProcess.Current++; });
         }
 
         protected override void Editor_SetProperties() {

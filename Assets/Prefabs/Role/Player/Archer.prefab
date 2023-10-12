@@ -207,23 +207,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8990698311034249219, guid: eb5fca43ed781164bb350140f2252595, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1423783327259570682}
+    - targetCorrespondingSourceObject: {fileID: 8990698311034249219, guid: eb5fca43ed781164bb350140f2252595, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8920306155286167321}
   m_SourcePrefab: {fileID: 100100000, guid: eb5fca43ed781164bb350140f2252595, type: 3}
 --- !u!4 &15683395892201624 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2676076722927513715, guid: eb5fca43ed781164bb350140f2252595, type: 3}
   m_PrefabInstance: {fileID: 2672009445119097067}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &207720179161439027 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2879236166879994840, guid: eb5fca43ed781164bb350140f2252595, type: 3}
-  m_PrefabInstance: {fileID: 2672009445119097067}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6472097163314288872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8acb1d8b7d6f4afab5ef00f2c7be9c5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &779994570636082158 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3442995881126707973, guid: eb5fca43ed781164bb350140f2252595, type: 3}
@@ -286,25 +278,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RoleType: 100
-  AttackCD: 0.3
   BaseDamage: 3
   BaseHp: 3
-  MoveToLocatorSpeed: 0.5
-  RoleHpSystemRef: {fileID: 207720179161439027}
   RoleAnimationSystemRef: {fileID: 4045220422762126633}
-  RoleEffectSystemRef: {fileID: 779994570636082158}
+  RoleComVfxRef: {fileID: 779994570636082158}
   RolePhysicalSystemRef: {fileID: 4379965774162566521}
   RoleUISystemRef: {fileID: 3102104410617345108}
-  AllRoleSystems:
-  - {fileID: 207720179161439027}
-  - {fileID: 4045220422762126633}
-  - {fileID: 779994570636082158}
-  - {fileID: 4379965774162566521}
-  - {fileID: 3102104410617345108}
-  PET_CanAttack: {fileID: 5283772414329232582}
-  MergeCount: 4
+  MergeCount: 5
+  MoveToLocatorSpeed: 0.5
+  RoleComFireBulletAttackRef: {fileID: 8920306155286167321}
+--- !u!114 &8920306155286167321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6472097163314288872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f1ccf50c4be4fbabe3813f0f2818ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 1423783327259570682}
+  PET_Self: {fileID: 5283772414329232582}
   AssetRef_Bullet:
     m_AssetGUID: 4c986262ab334434c82dc8d10fb679b1
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  DefaultCD: 0.5

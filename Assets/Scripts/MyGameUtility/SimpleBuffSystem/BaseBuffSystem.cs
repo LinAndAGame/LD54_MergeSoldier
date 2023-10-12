@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using MyGameExpand;
+using Sirenix.OdinInspector;
 
 namespace MyGameUtility {
+    [Serializable]
     public abstract class BaseBuffSystem {
         public CustomAction OnAddBuffBefore    = new CustomAction();
         public CustomAction OnAddBuffAfter     = new CustomAction();
@@ -11,6 +14,7 @@ namespace MyGameUtility {
         public ValueCacheBool CanAddBuff    = true;
         public ValueCacheBool CanRemoveBuff = true;
 
+        [ShowInInspector, ReadOnly]
         private List<BaseBuff> _AllBuffs = new List<BaseBuff>();
 
         public virtual void AddBuff(BaseBuff otherBuff, BuffCollection buffCollection = null) {
@@ -18,12 +22,14 @@ namespace MyGameUtility {
             if (CanAddBuff.GetValue() == false) {
                 return;
             }
+
             
+            otherBuff.InitBuffOwner(this);
             buffCollection?.Add(otherBuff);
             BaseBuff aliveBuff = _AllBuffs.Find(data => data.GetType() == otherBuff.GetType());
             if (aliveBuff == null) {
                 _AllBuffs.Add(otherBuff);
-                otherBuff.Init(this);
+                otherBuff.Init();
                 OnAddBuffAfter.Invoke();
             }
             else {
@@ -55,6 +61,19 @@ namespace MyGameUtility {
                 aliveBuff.Layer -= otherBuff.Layer;
             }
             otherBuff.ClearBuff();
+        }
+
+        public virtual void SetBuffLayerOffset(BaseBuff target, int offsetLayer) {
+            if (target.BuffOwner == null || target.BuffOwner != this) {
+                return;
+            }
+            
+            var aliveBuff = GetAliveBuff(target);
+            if (aliveBuff == null) {
+                return;
+            }
+
+            aliveBuff.Layer += offsetLayer;
         }
 
         public virtual void RemoveBuff(BaseBuff otherBuff) {

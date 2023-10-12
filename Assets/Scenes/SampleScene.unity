@@ -2864,16 +2864,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CD: 2.3
   AllRolePrefabs:
-  - {fileID: 1549431121844870098, guid: 9a995717bace4c74b85a344737bdd690, type: 3}
   - {fileID: 6216892247160477750, guid: c827c0091c4990d47b360988d2cff081, type: 3}
-  - {fileID: 6112298467783436344, guid: bae32781e074ace4296e975dbdcbadc2, type: 3}
-  - {fileID: 437133891790946697, guid: d4514188b8017f94fabbe639293f9cf8, type: 3}
-  - {fileID: 3418271834299067495, guid: e1ec39cf2f352d44198ccf873bb8a55d, type: 3}
-  - {fileID: 6661035011433024077, guid: 04dfd23c92a798448b6804574d55d8c2, type: 3}
-  - {fileID: 3855307262765085955, guid: 253cb1a950713e84bbb590c705eb7905, type: 3}
-  - {fileID: 813157173522253191, guid: ddb372d9ef704f848a6fd0ab9a592136, type: 3}
-  - {fileID: 6506728042046720730, guid: b6d286d21aa79bd478c54e3e4bc048c8, type: 3}
-  - {fileID: 4374821729509968428, guid: 4945d64ba3a05b44ea980cad0b90192e, type: 3}
+  - {fileID: 3701575772789116319, guid: 8004bec1a40711b468912893c11d5175, type: 3}
 --- !u!4 &415794017
 Transform:
   m_ObjectHideFlags: 0
@@ -3781,10 +3773,11 @@ MonoBehaviour:
   - {fileID: 1423783327259570682, guid: 8c391b94a8fa713449b84c7595b33574, type: 3}
   - {fileID: 908669762944143232, guid: ed99e94fe55772b429137a11d16f9ada, type: 3}
   - {fileID: 8074235857937039801, guid: 2ee81eb1280bb5e41b16e47f247e0451, type: 3}
+  - {fileID: 8855980898531225808, guid: d4b8bb4e0d118c046a955251dfad339a, type: 3}
+  - {fileID: 6725092813550952236, guid: 617d89ab2fbbb454bb40c8ca70e34317, type: 3}
   - {fileID: 7417388830807080637, guid: b7c193de3acb0df409696e53455645a5, type: 3}
   - {fileID: 3130616949771714208, guid: 933eb2a237d72bd4ebd0a9030302f4fe, type: 3}
   - {fileID: 856396885924764473, guid: 572b4c807253bb043bb1a003dfd49d73, type: 3}
-  - {fileID: 1807893738266584498, guid: cf445b70c3d74f341be7ba1eb9b4b573, type: 3}
 --- !u!4 &522393226
 Transform:
   m_ObjectHideFlags: 0

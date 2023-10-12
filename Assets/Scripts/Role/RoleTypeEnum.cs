@@ -8,6 +8,10 @@
         Soldier_2,
         Soldier_3,
         
+        AreaSupporting = 300,
+        
+        TargetSupporting = 400,
+        
         Enemy_1 = 10000,
         
         Boss_1 = 20000,

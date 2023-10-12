@@ -20,17 +20,9 @@ namespace Role {
         }
 
         public override void EffectHandleInternal() {
-            if (CanAttack() == false) {
-                return;
-            }
-
             HitEnemiesHandle();
             AttackCDHandle();
             OtherSystemAttackEffectHandle();
-        }
-
-        protected virtual bool CanAttack() {
-            return CanEffectHandle && Owner.RoleStateInfoRef.CanAttack.GetValue() && AllTouchedPlayers.Count != 0;
         }
 
         protected virtual void OtherSystemAttackEffectHandle() {

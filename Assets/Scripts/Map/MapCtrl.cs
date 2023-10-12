@@ -203,7 +203,6 @@ namespace Map {
                 if (System.Enum.IsDefined(typeof(RoleTypeEnum), nextRoleTypeNum)) {
                     RoleTypeEnum nextRoleType = (RoleTypeEnum)nextRoleTypeNum;
                     var          nextRole     = Instantiate(FightCtrl.I.RoleCreatorCtrlRef.GetRoleByType(nextRoleType) as BaseRole_Player);
-                    nextRole.InitOnRoleGroup();
                     nextRole.MoveToLocator(upgradeMapLocator);
                     nextRole.Init();
 

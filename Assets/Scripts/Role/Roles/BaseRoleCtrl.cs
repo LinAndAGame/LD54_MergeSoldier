@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using DamageProcess;
 using MyGameUtility;
 using Sirenix.OdinInspector;
@@ -20,12 +21,26 @@ namespace Role {
         public RoleCommonInfo   RoleCommonInfo;
         public RoleStateInfo    RoleStateInfoRef;
         public RoleEvent        RoleEventRef;
+        [ShowInInspector, ReadOnly]
         public BaseBuffSystem       BuffSystemRef = new BuffSystemDefault();
 
         protected bool _HasInit;
 
         public virtual void Init() {
             _HasInit = true;
+            InitInfos();
+            InitCallBacks();
+        }
+
+        protected virtual void InitInfos() {
+            RoleCommonInfo        = new RoleCommonInfo(this);
+            RoleStateInfoRef      = new RoleStateInfo(this);
+            RoleEventRef          = new RoleEvent(this);
+            HpInternalSystemRef   = new HpInternalSystem(this);
+        }
+
+        protected virtual void InitCallBacks() {
+            AllRoleSystems = this.GetComponents<IRoleCallBacks>().ToList();
             foreach (var roleSystem in AllRoleSystems) {
                 roleSystem.Init();
             }
@@ -89,6 +104,7 @@ namespace Role {
         }
 
         public virtual void DestroySelf() {
+            BuffSystemRef.Clear();
             Destroy(this.gameObject);
         }
 
@@ -96,7 +112,6 @@ namespace Role {
         [Button]
         protected virtual void Editor_SetProperties() {
             // 优化
-            AllRoleSystems.Clear();
             Editor_InitRoleCom<RoleCom_Animation,BaseRoleCtrl>(ref RoleAnimationSystemRef);
             Editor_InitRoleCom<RoleCom_Vfx,BaseRoleCtrl>(ref RoleComVfxRef);
             Editor_InitRoleCom<RoleCom_Physical,BaseRoleCtrl>(ref RolePhysicalSystemRef);
@@ -113,7 +128,6 @@ namespace Role {
 
             property       = this.GetComponent<TCom>();
             property.Owner = this.GetComponent<TComOwner>();
-            AllRoleSystems.Add(property);
         }
 #endif
     }

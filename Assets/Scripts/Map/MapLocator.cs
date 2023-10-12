@@ -5,6 +5,7 @@ using HighlightPlus;
 using MyGameExpand;
 using MyGameUtility;
 using Role;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Map {
@@ -30,6 +31,7 @@ namespace Map {
             }
         }
 
+        [ShowInInspector, ReadOnly]
         public BaseBuffSystem BuffSystemRef { get; } = new BuffSystemDefault();
 
         public bool       HasRoleData  => CurPlacedPlayerRole != null;
@@ -48,6 +50,24 @@ namespace Map {
                 result.AddExceptNull(DownLocator);
                 result.AddExceptNull(LeftLocator);
                 result.AddExceptNull(RightLocator);
+
+                return result;
+            }
+        }
+        public List<MapLocator> AroundCanAttackLocators {
+            get {
+                List<MapLocator> result = new List<MapLocator>();
+                addLocator(UpLocator);
+                addLocator(DownLocator);
+                addLocator(LeftLocator);
+                addLocator(RightLocator);
+
+                void addLocator(MapLocator mapLocator) {
+                    if (mapLocator == null) {
+                        return;
+                    }
+                    result.AddExceptNull(mapLocator.IsCanAttackLocator ? mapLocator : null);
+                }
 
                 return result;
             }

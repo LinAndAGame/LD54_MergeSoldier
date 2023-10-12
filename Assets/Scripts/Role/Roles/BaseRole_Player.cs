@@ -1,5 +1,6 @@
 ﻿using DG.Tweening;
 using Map;
+using MyGameUtility;
 using UnityEngine;
 
 namespace Role {
@@ -14,10 +15,11 @@ namespace Role {
 
         public MapLocator BelongToLocator { get; private set; }
 
-        public virtual void InitOnRoleGroup() {
-            RoleCommonInfo   = new RoleCommonInfo(this);
-            RoleStateInfoRef = new RoleStateInfo(this);
-            RoleEventRef     = new RoleEvent(this);
+        protected override void InitInfos() {
+            base.InitInfos();
+            RoleCommonInfo.Damage = BaseDamage;
+            float maxHp = BaseHp;
+            HpInternalSystemRef.Hp = new MinMaxValueFloat(0, maxHp, maxHp);
         }
 
         public void SetNotPlacedOnLocator() {

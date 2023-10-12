@@ -33,6 +33,10 @@ namespace Role {
             }
         }
 
+        protected override bool CanEffectHandleInternal() {
+            return CanEffectHandle && Owner.RoleStateInfoRef.CanAttack.GetValue() && AllTouchedPlayers.Count != 0;
+        }
+
         protected virtual bool CanAddToTouched(Collider2D other) {
             return true;
         }

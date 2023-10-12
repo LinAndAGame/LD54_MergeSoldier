@@ -2,15 +2,15 @@
 
 namespace MyGameUtility {
     public class BuffCollection {
-        private List<BaseBuff> _AllBuffCaches = new List<BaseBuff>();
+        private List<BuffCache> _AllBuffCaches = new List<BuffCache>();
 
         public void Add(BaseBuff buff) {
-            _AllBuffCaches.Add(buff);
+            _AllBuffCaches.Add(buff.GetBuffCache());
         }
 
         public void Clear() {
             foreach (var buffCache in _AllBuffCaches) {
-                buffCache.RemoveFromBuffOwner();
+                buffCache.Clear();
             }
             _AllBuffCaches.Clear();
         }

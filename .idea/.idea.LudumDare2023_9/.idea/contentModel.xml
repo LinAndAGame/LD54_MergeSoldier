@@ -1044,6 +1044,7 @@
               <e p="BaseBuff.cs" t="Include" />
               <e p="BaseBuffSystem.cs" t="Include" />
               <e p="BaseBuffWithOwner.cs" t="Include" />
+              <e p="BuffCache.cs" t="Include" />
               <e p="BuffCollection.cs" t="Include" />
               <e p="BuffSystemDefault.cs" t="Include" />
             </e>

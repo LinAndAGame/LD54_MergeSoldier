@@ -14,11 +14,15 @@ namespace Role {
 
 
         public void EffectHandle() {
-            if (CanEffectHandle == false) {
+            if (CanEffectHandleInternal() == false) {
                 return;
             }
             
             EffectHandleInternal();
+        }
+
+        protected virtual bool CanEffectHandleInternal() {
+            return CanEffectHandle;
         }
 
         public virtual void Init()                 {}

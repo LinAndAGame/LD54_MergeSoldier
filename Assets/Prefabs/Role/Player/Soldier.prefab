@@ -207,6 +207,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8990698311034249219, guid: eb5fca43ed781164bb350140f2252595, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7417388830807080637}
+    - targetCorrespondingSourceObject: {fileID: 8990698311034249219, guid: eb5fca43ed781164bb350140f2252595, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2115237891319958992}
   m_SourcePrefab: {fileID: 100100000, guid: eb5fca43ed781164bb350140f2252595, type: 3}
 --- !u!1 &3357918440023842273 stripped
 GameObject:
@@ -226,23 +229,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RoleType: 200
-  AttackCD: 0.3
   BaseDamage: 1
   BaseHp: 10
-  MoveToLocatorSpeed: 0.5
-  RoleHpSystemRef: {fileID: 8478522680426536506}
   RoleAnimationSystemRef: {fileID: 5722871818983299104}
-  RoleEffectSystemRef: {fileID: 9050867450027753191}
+  RoleComVfxRef: {fileID: 9050867450027753191}
   RolePhysicalSystemRef: {fileID: 5440621825600493680}
   RoleUISystemRef: {fileID: 6648677086287851869}
-  AllRoleSystems:
-  - {fileID: 8478522680426536506}
-  - {fileID: 5722871818983299104}
-  - {fileID: 9050867450027753191}
-  - {fileID: 5440621825600493680}
-  - {fileID: 6648677086287851869}
-  PET_CanAttack: {fileID: 5884006545505345532}
-  MergeCount: 4
+  MergeCount: 5
+  MoveToLocatorSpeed: 0.5
+  CloseAttackEnemyCom: {fileID: 2115237891319958992}
+--- !u!114 &2115237891319958992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3357918440023842273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a8ad6421bc34bb7a6bf951d8b27de4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Owner: {fileID: 7417388830807080637}
+  PET_Self: {fileID: 5884006545505345532}
+  DefaultAttackCD: 1
 --- !u!114 &5440621825600493680 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1863401474031871378, guid: eb5fca43ed781164bb350140f2252595, type: 3}
@@ -274,17 +284,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b80f448bbb4478c8525b1e6063e3de1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8478522680426536506 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2879236166879994840, guid: eb5fca43ed781164bb350140f2252595, type: 3}
-  m_PrefabInstance: {fileID: 5934857540360502754}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3357918440023842273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8acb1d8b7d6f4afab5ef00f2c7be9c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &8610755926665022865 stripped
