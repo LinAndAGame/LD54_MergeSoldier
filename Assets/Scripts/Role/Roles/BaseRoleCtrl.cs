@@ -7,6 +7,8 @@ using UnityEngine;
 
 namespace Role {
     public abstract class BaseRoleCtrl : MonoBehaviour {
+        public CustomAction OnDestroyed = new CustomAction();
+        
         public RoleTypeEnum            RoleType;
         public float                BaseDamage         = 5;
         public float                BaseHp             = 10;
@@ -83,6 +85,7 @@ namespace Role {
                 roleSystem.DoOnDeath();
             }
             RoleEventRef.OnDeathSucceed.Invoke();
+            DestroySelf();
         }
 
         public void BeHit(DamageInfo damageInfo) {
@@ -104,8 +107,13 @@ namespace Role {
         }
 
         public virtual void DestroySelf() {
-            BuffSystemRef.Clear();
+            ClearData();
             Destroy(this.gameObject);
+            OnDestroyed.Invoke();
+        }
+
+        protected virtual void ClearData() {
+            BuffSystemRef.Clear();
         }
 
 #if UNITY_EDITOR

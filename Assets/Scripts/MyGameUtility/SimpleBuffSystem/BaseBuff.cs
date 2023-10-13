@@ -11,13 +11,6 @@ namespace MyGameUtility {
         private int _Layer;
         public int Layer {
             get => _Layer;
-            set {
-                _Layer = value;
-                OnLayerChanged.Invoke();
-                if (_Layer <= 0) {
-                    BuffOwner.RemoveBuff(this);
-                }
-            }
         }
 
         protected CustomAction OnMerged = new CustomAction();
@@ -31,6 +24,14 @@ namespace MyGameUtility {
 
         public BaseBuff(int layer) {
             this._Layer = layer;
+        }
+
+        public void SetLayerOffset(int offset) {
+            _Layer += offset;
+            OnLayerChanged.Invoke();
+            if (Layer <= 0) {
+                BuffOwner.RemoveBuff(this);
+            }
         }
 
         public void InitBuffOwner(BaseBuffSystem buffOwner) {
@@ -59,7 +60,7 @@ namespace MyGameUtility {
         }
 
         public virtual void MergeBuff(BaseBuff otherBuff) {
-            this.Layer += otherBuff.Layer;
+            SetLayerOffset(otherBuff.Layer);
             OnMerged.Invoke();
         }
 

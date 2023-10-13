@@ -58,7 +58,7 @@ namespace MyGameUtility {
             
             BaseBuff aliveBuff = GetAliveBuff(otherBuff);
             if (aliveBuff!=null) {
-                aliveBuff.Layer -= otherBuff.Layer;
+                aliveBuff.SetLayerOffset(otherBuff.Layer);
             }
             otherBuff.ClearBuff();
         }
@@ -73,7 +73,7 @@ namespace MyGameUtility {
                 return;
             }
 
-            aliveBuff.Layer += offsetLayer;
+            aliveBuff.SetLayerOffset(offsetLayer);
         }
 
         public virtual void RemoveBuff(BaseBuff otherBuff) {
@@ -96,10 +96,11 @@ namespace MyGameUtility {
         }
 
         public virtual void Clear() {
-            foreach (var buff in _AllBuffs) {
+            for (var i = _AllBuffs.Count - 1; i >= 0; i--) {
+                var buff = _AllBuffs[i];
                 RemoveBuff(buff);
             }
-            
+
             _AllBuffs.Clear();
         }
 

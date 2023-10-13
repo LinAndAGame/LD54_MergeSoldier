@@ -27,6 +27,11 @@ namespace Role {
 
         public virtual void Init()                 {}
         public virtual void EffectHandleInternal() {}
-        public virtual void DoOnDeath()            {}
+
+        public virtual void DoOnDeath() {
+            VCC.Clear();
+            CEC.Clear();
+            BC.Clear();
+        }
     }
 }

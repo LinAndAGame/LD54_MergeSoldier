@@ -8,10 +8,10 @@ namespace Buff {
         public BuffTypeEnum AddBuffType;
         public int          Layer;
 
-        public BaseBuff GetBuff(BaseRoleCtrl dataOwner) {
+        public BaseBuff GetBuff(BaseRoleCtrl dataOwner, Func<int, int> getLayerFunc = null) {
             switch (AddBuffType) {
                 case BuffTypeEnum.Buff_AddDamage:
-                    return new Buff_AddDamage(dataOwner, Layer);
+                    return new Buff_AddDamage(dataOwner, getLayerFunc == null ? Layer : getLayerFunc.Invoke(Layer));
                 default:
                     throw new ArgumentOutOfRangeException();
             }

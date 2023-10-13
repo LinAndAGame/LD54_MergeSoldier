@@ -18,7 +18,9 @@ namespace Buff {
             DataOwner.OnPlayerLeft.AddListener(data => {
                 BC.Clear();
             }, CEC);
-            DataOwner.OnPlayerPlaced.AddListener(addBuff, CEC);
+            DataOwner.OnPlayerPlaced.AddListener(data => {
+                resetBuff();
+            }, CEC);
             OnLayerChanged.AddListener(resetBuff, CEC);
 
             void resetBuff() {
@@ -30,8 +32,7 @@ namespace Buff {
 
             void addBuff(BaseRole_Player rolePlayer) {
                 foreach (var addBuffInfo in _AllReadyAddedBuffInfos) {
-                    var buff = addBuffInfo.GetBuff(rolePlayer);
-                    buff.Layer *= this.Layer;
+                    var buff = addBuffInfo.GetBuff(rolePlayer,data=>data * this.Layer);
                     rolePlayer.BuffSystemRef.AddBuff(buff, BC);
                 }
             }

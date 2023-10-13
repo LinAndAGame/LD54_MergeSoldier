@@ -26,7 +26,7 @@ namespace Role {
             if (BelongToLocator != null) {
                 OnLeftLocator.Invoke(BelongToLocator);
                 BelongToLocator.CurPlacedPlayerRole = null;
-                BelongToLocator                   = null;
+                BelongToLocator                     = null;
             }
         }
 
@@ -56,10 +56,13 @@ namespace Role {
             ForceMoveToMapLocator(BelongToLocator);
         }
 
-        public override void DestroySelf() {
+        protected override void ClearData() {
             _MoveToLocatorTweener.Kill();
-            SetNotPlacedOnLocator();
-            base.DestroySelf();
+            if (BelongToLocator != null) {
+                BelongToLocator.CurPlacedPlayerRole = null;
+                BelongToLocator                     = null;
+            }
+            base.ClearData();
         }
     }
 }
