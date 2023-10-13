@@ -28,6 +28,9 @@ namespace Role {
         public virtual void Init()                 {}
         public virtual void EffectHandleInternal() {}
 
+        public virtual void DoOnMouseEnter() { }
+        public virtual void DoOnMouseExit()  { }
+
         public virtual void DoOnDeath() {
             VCC.Clear();
             CEC.Clear();

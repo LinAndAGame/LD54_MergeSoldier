@@ -82,6 +82,15 @@ namespace Map {
             }
         }
 
+        public void PlayHighLightEffect(HighlightProfile profile) {
+            HighlightEffectRef.ProfileLoad(profile);
+            HighlightEffectRef.SetHighlighted(true);
+        }
+
+        public void CloseHighLightEffect() {
+            HighlightEffectRef.SetHighlighted(false);
+        }
+
         public void Editor_Init(Vector2Int pos) {
             Pos       =  pos;
             this.name += $"_{pos.x}_{pos.y}";

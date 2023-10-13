@@ -1,22 +1,29 @@
 ﻿using System;
 using System.Linq;
 using Fight;
+using HighlightPlus;
 using Map;
+using MyGameUtility;
+using Role;
 using UnityEngine;
 
 namespace Player {
     public class PlayerCtrl : MonoBehaviour {
+        public HighlightProfile HighlightProfile_MouseTouch;
+
         private MapLocator _LastTouchedMapLocator;
 
         public MapLocator LastTouchedMapLocator {
             get => _LastTouchedMapLocator;
             set {
                 if (_LastTouchedMapLocator != null) {
-                    _LastTouchedMapLocator.HighlightEffectRef.highlighted = false;
+                    _LastTouchedMapLocator.CloseHighLightEffect();
                 }
 
-                _LastTouchedMapLocator                                = value;
-                _LastTouchedMapLocator.HighlightEffectRef.highlighted = true;
+                _LastTouchedMapLocator = value;
+                if (_LastTouchedMapLocator != null) {
+                    _LastTouchedMapLocator.PlayHighLightEffect(HighlightProfile_MouseTouch);
+                }
 
                 if (FightCtrl.I.MapCtrlRef.AllPlayerPreviewMapLocators.Contains(_LastTouchedMapLocator)) {
                     LastTouchedCanPlacedMapLocator = value;
@@ -31,37 +38,26 @@ namespace Player {
         public MapLocator LastTouchedCanPlacedMapLocator {
             get => _LastTouchedCanPlacedMapLocator;
             private set {
-                if (_LastTouchedCanPlacedMapLocator != null) {
-                    _LastTouchedCanPlacedMapLocator.HighlightEffectRef.highlighted = false;
-                }
-
-                _LastTouchedCanPlacedMapLocator                                = value;
-                _LastTouchedCanPlacedMapLocator.HighlightEffectRef.highlighted = true;
-
+                _LastTouchedCanPlacedMapLocator = value;
                 FightCtrl.I.RoleGroupCreator.PreviewRoleGroupToCurTouchedMapLocator();
             }
         }
 
-        private RaycastHit2D[] _Hit2Ds = new RaycastHit2D[10];
-
         public void Init() {
             LastTouchedMapLocator = FightCtrl.I.MapCtrlRef.AllPlayerPreviewMapLocators[0];
-        }
-
-        private void Update() {
-            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            var hitCount = Physics2D.RaycastNonAlloc(mouseWorldPos, Vector2.zero, _Hit2Ds);
-            if (hitCount > 0) {
-                for (int i = 0; i < hitCount; i++) {
-                    var curHit2D = _Hit2Ds[i];
-                    if (curHit2D.transform.CompareTag("MapLocator")) {
-                        var curLocator = curHit2D.transform.GetComponent<MapLocator>();
-                        if (curLocator != LastTouchedMapLocator) {
-                            LastTouchedMapLocator = curLocator;
-                        }
+            
+            Physics2DTouchUtility.I.OnMouseEnter.AddListener(data => {
+                if (data.HitTrans.CompareTag("MapLocator")) {
+                    var curLocator = data.HitTrans.GetComponent<MapLocator>();
+                    if (curLocator != LastTouchedMapLocator) {
+                        LastTouchedMapLocator = curLocator;
                     }
+
+                    data.OnMouseExit.AddListener(() => {
+                        LastTouchedMapLocator = null;
+                    }, data.CEC);
                 }
-            }
+            });
         }
     }
 }

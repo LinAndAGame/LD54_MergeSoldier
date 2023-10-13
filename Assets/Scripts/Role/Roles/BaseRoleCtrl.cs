@@ -17,7 +17,7 @@ namespace Role {
         public RoleCom_Vfx     RoleComVfxRef;
         public RoleCom_Physical   RolePhysicalSystemRef;
         public RoleCom_UI         RoleUISystemRef;
-        public List<IRoleCallBacks> AllRoleSystems;
+        public List<IRoleCallBacks> AllRoleCallBacks;
 
         public HpInternalSystem HpInternalSystemRef;
         public RoleCommonInfo   RoleCommonInfo;
@@ -42,8 +42,8 @@ namespace Role {
         }
 
         protected virtual void InitCallBacks() {
-            AllRoleSystems = this.GetComponents<IRoleCallBacks>().ToList();
-            foreach (var roleSystem in AllRoleSystems) {
+            AllRoleCallBacks = this.GetComponents<IRoleCallBacks>().ToList();
+            foreach (var roleSystem in AllRoleCallBacks) {
                 roleSystem.Init();
             }
         }
@@ -56,7 +56,7 @@ namespace Role {
                 return;
             }
 
-            foreach (var roleSystem in AllRoleSystems) {
+            foreach (var roleSystem in AllRoleCallBacks) {
                 roleSystem.EffectHandle();
             }
         }
@@ -81,7 +81,7 @@ namespace Role {
             }
 
             RoleStateInfoRef.IsDeath = true;
-            foreach (var roleSystem in AllRoleSystems) {
+            foreach (var roleSystem in AllRoleCallBacks) {
                 roleSystem.DoOnDeath();
             }
             RoleEventRef.OnDeathSucceed.Invoke();

@@ -1009,8 +1009,6 @@
               <e p="APIExpandCSharp.cs" t="Include" />
               <e p="APIExpandUnity.cs" t="Include" />
             </e>
-            <e p="OtherUtility.cs" t="Include" />
-            <e p="PhysicalEventTrigger.cs" t="Include" />
             <e p="Pool" t="Include">
               <e p="CustomPoolFunctions" t="Include">
                 <e p="BaseCustomPoolFunctions.cs" t="Include" />
@@ -1056,7 +1054,6 @@
               <e p="StateMachineSimple.cs" t="Include" />
               <e p="StateMachineSimpleState.cs" t="Include" />
             </e>
-            <e p="StringUtility.cs" t="Include" />
             <e p="TimerHelp" t="Include">
               <e p="ITimingTaskNode.cs" t="Include" />
               <e p="TimerAgent.cs" t="Include" />
@@ -1070,7 +1067,6 @@
                 <e p="TimingDelayData.cs" t="Include" />
               </e>
             </e>
-            <e p="UIUtility.cs" t="Include" />
             <e p="UnityExpandComponent" t="Include">
               <e p="ObjectFollow" t="Include">
                 <e p="ObjectFollow.cs" t="Include" />
@@ -1081,6 +1077,13 @@
               <e p="UI" t="Include">
                 <e p="UIFrameAnimation.cs" t="Include" />
               </e>
+            </e>
+            <e p="UtilityScripts" t="Include">
+              <e p="OtherUtility.cs" t="Include" />
+              <e p="PhysicalEventTrigger.cs" t="Include" />
+              <e p="Physics2DTouchUtility.cs" t="Include" />
+              <e p="StringUtility.cs" t="Include" />
+              <e p="UIUtility.cs" t="Include" />
             </e>
           </e>
           <e p="Player" t="Include">
@@ -1154,6 +1157,7 @@
           </e>
         </e>
         <e p="ScritableAssets" t="Include">
+          <e p="HighlightProfile" t="Include" />
           <e p="PlayerAbility" t="Include" />
         </e>
         <e p="Settings" t="Include">

@@ -5,14 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53e49cda-0e78-48dc-88f6-bb4588b14bd8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/UtilityScripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/UtilityScripts/Physics2DTouchUtility.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/UtilityScripts/Physics2DTouchUtility.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScritableAssets/HighlightProfile.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScritableAssets/HighlightProfile/HighlightProfile_区域辅助塔辅助的区域高亮.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScritableAssets/HighlightProfile/HighlightProfile_区域辅助塔辅助的区域高亮.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScritableAssets/HighlightProfile/HighlightProfile_鼠标触摸当前MapLocator.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScritableAssets/HighlightProfile/HighlightProfile_鼠标触摸当前MapLocator.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare2023_9/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare2023_9/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare2023_9/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare2023_9/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buff/AddBuffInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buff/AddBuffInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Buff/Buff_MapLocatorAddBuffToPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Buff/Buff_MapLocatorAddBuffToPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BaseBuff.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BaseBuff.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BaseBuffSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BaseBuffSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.plastic/plastic.changes" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.changes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Role/Player/BaseRole_AreaSupporting.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Role/Player/BaseRole_AreaSupporting.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/MapLocator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/MapLocator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/OtherUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/UtilityScripts/OtherUtility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/OtherUtility.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/UtilityScripts/OtherUtility.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/PhysicalEventTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/UtilityScripts/PhysicalEventTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/PhysicalEventTrigger.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/UtilityScripts/PhysicalEventTrigger.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/StringUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/UtilityScripts/StringUtility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/StringUtility.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/UtilityScripts/StringUtility.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/UIUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/UtilityScripts/UIUtility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/UIUtility.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/UtilityScripts/UIUtility.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCtrl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/BaseRoleComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/BaseRoleComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_AreaPlayerAddBuff.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_AreaPlayerAddBuff.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRoleCtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRoleCtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRole_Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRole_Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,27 +55,33 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/605BF8B3-1FCB-444B-8517-6DA963870AA7/b2/5adcf583/EqualityComparer`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Role/Ability/ClusterBomb/Buff_ClusterBomb.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/605BF8B3-1FCB-444B-8517-6DA963870AA7/51/943a3845/GenericEqualityComparer`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/65557046-7A33-4BB3-84E3-67C156617D53/7b/cdc4b8c3/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.21.18/Runtime/IKeyEvaluator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/73C7CF64-7337-4ECA-8332-474B6BD3C29A/50/4ab5fc12/EventDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.21.18/Runtime/IKeyEvaluator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/65557046-7A33-4BB3-84E3-67C156617D53/f1/1fe37fb7/ObjectPool`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/605BF8B3-1FCB-444B-8517-6DA963870AA7/1c/a9127186/ObjectEqualityComparer`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B70370F7-C0E5-48A9-AC87-525F3ABD0EF9/04/2b2b9840/HashSet`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.21.18/Runtime/AssetReference.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/605BF8B3-1FCB-444B-8517-6DA963870AA7/20/b44b7d5b/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/65557046-7A33-4BB3-84E3-67C156617D53/2d/9b22e8c3/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Role/Ability/ClusterBomb/Buff_ClusterBomb.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/73C7CF64-7337-4ECA-8332-474B6BD3C29A/50/4ab5fc12/EventDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/605BF8B3-1FCB-444B-8517-6DA963870AA7/5a/32b05be1/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/605BF8B3-1FCB-444B-8517-6DA963870AA7/20/fc442c2d/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/65557046-7A33-4BB3-84E3-67C156617D53/84/75035a79/Component.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/65557046-7A33-4BB3-84E3-67C156617D53/f1/1fe37fb7/ObjectPool`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/605BF8B3-1FCB-444B-8517-6DA963870AA7/1c/a9127186/ObjectEqualityComparer`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.21.18/Runtime/AssetReference.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/605BF8B3-1FCB-444B-8517-6DA963870AA7/20/b44b7d5b/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/EffectHandle/RoleCom_Move.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_TouchOthers.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_AttackEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_FireBullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/DataStructure/ValueCache/ValueCacheFloat.cs" />
@@ -79,7 +105,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BuffSystemDefault.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bullet/BulletCtrl.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Animation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/IRoleCallBacks.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_UI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_Physical.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_TargetAddBuff.cs" />
@@ -96,15 +121,18 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BuffCache.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BuffCollection.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Buff/Buff_AddDamage.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Map/MapLocator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRole_Player.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRoleCtrl.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/BaseRoleComponent.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_AreaPlayerAddBuff.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Buff/AddBuffInfo.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BaseBuff.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BaseBuffSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Buff/Buff_MapLocatorAddBuffToPlayer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/SimpleBuffSystem/BaseBuff.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Map/MapLocator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/BaseRoleComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/IRoleCallBacks.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/Roles/BaseRoleCtrl.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCtrl.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_AreaPlayerAddBuff.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MyGameUtility/UtilityScripts/Physics2DTouchUtility.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2WSYVq1vmZMYuvyFrwVXqDHa5BI" />
@@ -164,7 +192,7 @@
       <workItem from="1696991018566" duration="18640000" />
       <workItem from="1697090955279" duration="10943000" />
       <workItem from="1697103469670" duration="4824000" />
-      <workItem from="1697173599619" duration="4683000" />
+      <workItem from="1697173599619" duration="16521000" />
     </task>
     <task id="LOCAL-00001" summary="修复工具集中Addressable对象池bug">
       <created>1696746025682</created>
@@ -180,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696934012020</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="区域辅助防御塔可以运行">
+      <created>1697179001544</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697179001544</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -202,23 +237,24 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="修复工具集中Addressable对象池bug" />
     <MESSAGE value="重构角色Com系统" />
-    <option name="LAST_COMMIT_MESSAGE" value="重构角色Com系统" />
+    <MESSAGE value="区域辅助防御塔可以运行" />
+    <option name="LAST_COMMIT_MESSAGE" value="区域辅助防御塔可以运行" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Buff/Buff_MapLocatorAddBuffToPlayer.cs</url>
-          <line>34</line>
-          <properties documentPath="D:\LD54\LudumDare2023_9\Assets\Scripts\Buff\Buff_MapLocatorAddBuffToPlayer.cs" initialLine="34" containingFunctionPresentation="local function 'addBuff'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Role/RoleComponents/RoleCom_AreaPlayerAddBuff.cs</url>
+          <line>39</line>
+          <properties documentPath="D:\LD54\LudumDare2023_9\Assets\Scripts\Role\RoleComponents\RoleCom_AreaPlayerAddBuff.cs" initialLine="39" containingFunctionPresentation="lambda expression inside method 'Init'">
             <startOffsets>
-              <option value="1190" />
+              <option value="1518" />
             </startOffsets>
             <endOffsets>
-              <option value="1257" />
+              <option value="1568" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="15" />
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -226,6 +262,8 @@
       <pinned-members>
         <PinnedItemInfo parentTag="Type#MyGameUtility.BaseBuff" memberName="Layer" />
         <PinnedItemInfo parentTag="Type#MyGameUtility.BaseBuffSystem" memberName="_AllBuffs" />
+        <PinnedItemInfo parentTag="Type#MyGameUtility.Physics2DTouchUtility+TouchingInfo" memberName="HitTrans" />
+        <PinnedItemInfo parentTag="Type#UnityEngine.Component" memberName="gameObject" />
       </pinned-members>
     </pin-to-top-manager>
     <watches-manager>

@@ -120,6 +120,7 @@ MonoBehaviour:
   AllAddBuffInfos:
   - AddBuffType: 0
     Layer: 1
+  AreaHighlightProfile: {fileID: 11400000, guid: 5b20f5a0579a04545bc32421b04b79d8, type: 2}
 --- !u!114 &8855980898531225808
 MonoBehaviour:
   m_ObjectHideFlags: 0
